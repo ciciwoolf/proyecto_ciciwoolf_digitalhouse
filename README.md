@@ -6,7 +6,7 @@ ___
 ___
 
 + ## ___Publico Objetivo___
-       Mafci Artisanal Chocolate es para cualquiera que disfrute el chocolate gourmet. El cliente objetivo de este producto es la mujer profesional soltera de entre 25 y 35 años.      
+       El cliente objetivo de este producto es la mujer profesional de clase media (~$20,000/mes) soltera de entre 25 y 35 años.      
         
 + ## ___Caracteristicas Principales___
   1. Cada elemento de la página debe cumplir un propósito
