@@ -51,7 +51,7 @@ ___
 
 + ## ___Logo___
       
-       [imagenlogo](https://www.figma.com/file/O0x63Eug9Zw66yngUPqLyU/Proyecto?node-id=0%3A1)
+     ![Mafci Logo](/img/logo.png)
 
     | Clasificación | Caracteriztica | Ejemplo | 
     | ------------- | ------------- | ------------- |
