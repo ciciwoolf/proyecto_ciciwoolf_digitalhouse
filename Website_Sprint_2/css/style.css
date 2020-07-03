@@ -9,50 +9,11 @@ html,body {
 
 }
 
-/*Navbar*/
-
-#navbarmain {
-  width: 100%;
-  height: 100px;
-  background-color: #20063B;
-  
-}
-/*
- #navbar-dec {
-  width: 100%;
-  height: 10px;
-  background-color:  #009FB7;
-  padding-bottom: 25px;
-  
-}  */
-
 .navbar {
-  padding: .8rem;  
-  }   
-
-.navbar-nav li {
-  padding-right: 0 auto;
-  padding-bottom: 100px; 
-  margin-left: 50px;
-  color: black;
-  
-  }
-
-
-.navbar-brand {                       /*logo*/
-  padding-top: 150px; 
+  background:#20063B;
+  font-family: 'Lato', sans-serif;
+  color: #009FB7;
 }
-
-#btn-carrito {
-  background-color:#613DC1 ;
-  border: 1px solid #005866;
-  color: black;
- 
-  }
-
-  #btn-carrito:hover {
-    background-color: #D6FAFF;
-  }
 
 
 /*Carousel*/
