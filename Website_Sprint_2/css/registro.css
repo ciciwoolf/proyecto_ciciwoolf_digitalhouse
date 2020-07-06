@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+html,body {
+  height: 100%;
+  width: 100%;
+  font-family: 'Josefin Sans', sans-serif;
+  background-image: url('../img/car3.png'); 
+  background-color: #b4b4b4;
+}
+
+.navbar {
+  background-color:#20063B;
+  padding-bottom: 20px;
+  width: auto;
+  }
+
+.navbar-brand.navlogo {
+  height: auto;
+}
+
+.navbar-brand.navlogo:hover {
+  opacity: .80;
+  color: #b4b4b4;
+}
+
+.nav-link.pages {
+  font-family: 'Josefin Sans', sans-serif;
+  color: #009FB7 !important;
+  font-size: 28px;
+}
+
+.nav-link.pages:hover {
+  opacity: .80;
+}
+
+.nav-link.login {
+  font-family: 'Josefin Sans', sans-serif;
+  color: #009FB7 !important;
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+.nav-link.login:hover {
+  opacity: .80;
+}
+
+/*Body*/
+
+.container-fluid {
+    margin: 0 auto;
+    padding: 0;
+    margin: 0;
+}
+
+#forms {
+    margin-top: 15px;
+}

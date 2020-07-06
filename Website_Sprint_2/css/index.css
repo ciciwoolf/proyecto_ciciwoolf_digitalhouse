@@ -1,20 +1,49 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;900&family=Nunito&family=Proza+Libre&family=Rasa&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 
 html,body {
   height: 100%;
   width: 100%;
-  font-family: 'Lato', sans-serif;
-
+  font-family: 'Josefin Sans', sans-serif;
+  background-color:  #fdfffc;
 }
 
 .navbar {
-  background:#20063B;
-  font-family: 'Lato', sans-serif;
-  color: #009FB7;
+  background-color:#20063B;
+  padding-bottom: 20px;
+  width: 100%;
+  }
+
+.navbar-brand.navlogo {
+  height: 16px;
 }
 
+.navbar-brand.navlogo:hover {
+  opacity: .80;
+  color: #b4b4b4;
+}
+
+.nav-link.pages {
+  font-family: 'Josefin Sans', sans-serif;
+  color: #009FB7 !important;
+  font-size: 40px;
+}
+
+.nav-link.pages:hover {
+  opacity: .80;
+}
+
+.nav-link.login {
+  font-family: 'Josefin Sans', sans-serif;
+  color: #009FB7 !important;
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+.nav-link.login:hover {
+  opacity: .80;
+}
 
 /*Carousel*/
 
@@ -26,55 +55,54 @@ html,body {
 
 .carousel-caption {
   position: absolute;
-  top: 50%;
+  top: 35%;
   transform: translateY(-50%);
   }
 
-.carousel-caption h1 {
-  font-size: 200%;
+.display-2 {
+  font-size: 12px important!;
   text-transform: uppercase;
   text-shadow: 1px 1px 10px #000;
+  font-family: 'Permanent Marker', cursive;
+  color: #fdfffc;
+  padding-top: 150px !important;
 }
 
 #compra {
   background-color: #009FB7;
   border: 1px solid #005866;
+  font-size: larger;
 }
 
 #compra:hover {
-  background-color: #D6FAFF;
+  background-color: #613DC1;
 }
+
+/*Jumbotron*/
 
 .jumbotron {
   padding: 1rem;
   border-radius: 0;
 }
 
-#leermas {
-  background-color: #009FB7;
-  border: 1px solid #005866;
-  color: #FFFFFF;
-}
-
-#leermas:hover {
-  background-color: #613DC1;
-}
-
-
 /* Welcome Section */
 
-#origen {
+.lead.origen {
   text-align: justify;
+  padding-top: 2rem;
+  margin-left: 200px;  
+  font-size: 26px;
  }
 
 .lead {
   text-align: center;
+  font-size: 32px !important;
 }
 
 .welcome {
   width: 75%;
   margin: 0 auto;
-  padding-top: .5rem;
+  padding-top: 2rem;
    }
 
 .welcome hr {
@@ -82,77 +110,119 @@ html,body {
   width: 95%;
   margin-top: .3rem;
   margin-bottom: 1rem;
+  
 }
 
+/*3 Column Section */
 
-/*3 Column Section 
+ #headingthree {
+   font-size: 36px !important;
+   font-weight: bold;
+   padding-bottom: 10px;
+ }
 
-.icon-moon {
-  color: #20063B;
-  font-size: 4em;
-  margin: 1rem;
+ #comment {
+   font-size: 28px !important;
+ }
+
+#leaficon {
+  height: 2rem;  
 }
-*/
-
 
 /* Cards */
 
 #producto {
-  background-color: #20063B;
-  padding-bottom: 1em;
-  padding-top: 1em;
+ /* background-color: #20063B;*/
+  padding-bottom: 10px;
+  padding-top: 5px;
   text-align: center;
+  border: 30px solid #20063B;
+  font-size: 26px !important;
 
+}
+
+#compraCard {
+  font-size: larger;
+  background-color: #005866;
+  color: white;
+}
+
+#compraCard:hover {
+  background-color: #613DC1 ;
 }
 
 .card-img-top {
   width:100%;
-  border: 5px solid white;
-  
- }
+  border: 30px solid #20063B;
+  }
+
+  .card-img-top:hover {
+   opacity: .80;
+   
+   }
+   
 
 .borde {
   background-color:white;
   padding: 1em;
 }
 
-/* Two Column Section */
 
-#visitar {
-  background-color: #009FB7;
-  padding-bottom: 1em;
-  padding-top: 1em;
-  border: 10px solid #20063B;
-}
+/* Visit
 
-.flex-container {
-  display: flex;
-  align-items: stretch;
-}
-
-.img-fluid {
-  max-width: 200% !important;
-  height: auto;
-  border: 10px solid #20063B;
+#visit {
+  width: 100%;
+  background-color: #009FB7 !important;
 }
 
 #veni {
   text-align: right;
   color: #FFB60A;
+  font-size: 50px !important;
   background-color: #20063B;
-  margin-left: 100px;
-  
 }
+
+#fabrica {
+  border: 10px solid #613DC1;
+  margin-right: 2000px;  
+  margin-top: 50px;
+  margin-bottom: 50px;
+  height: 400px;
+  width: 400px;
+  
+}  
+
+*/
 
 /* Footer */
 
-footer {
+#footer1 {
+  width: cover;
   background-image:url('../img/footer.png');
   background-size: cover;
   color: #FFB60A;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
   padding-top: 2rem;
+  font-size: 18px !important;
   
+}
+
+#footerlogo {
+  height: 150px;
+  
+}
+
+#contact {
+ margin-left: 800px;
+ text-align: center;
+}
+
+#contactinfo1 {
+  font-size: larger;
+}
+
+#contactinfo2 {
+  font-size: larger;
 }
 
 hr.light {
@@ -160,26 +230,16 @@ hr.light {
   width: 75%;
   margin-top: .8rem;
   margin-bottom: 1rem;
+  font-family: 'Josefin Sans', sans-serif;
 }
 
-
-
-
- .fab fa-facebook  {      /*no funciona, porque?*/
-  font-size: 3em;    
-  color: #3b5998;
+.exampleInputEmail1 {
+  margin-right: 700px;
 }
 
- .fab fa-instagram  {     /*no funciona, porque?*/
-  font-size: 3em;
-  color: #517fa4;
+.nombre {
+  margin-left: 700px;
 }
-
-
-
-
-
-
 
 
 
@@ -214,7 +274,7 @@ figure {
   -webkit-transform: translateZ(0);
           transform: translateZ(0);
   will-change: transform;
-
+}
 
 
 
@@ -232,6 +292,8 @@ figure {
 
 
 /*---Firefox Bug Fix --*/
+
+/*
 .carousel-item {
   transition: -webkit-transform 0.5s ease;
   transition: transform 0.5s ease;
@@ -239,12 +301,8 @@ figure {
   -webkit-backface-visibility: visible;
   backface-visibility: visible;
 }
+*/
 
-}
-/*--- Bootstrap Padding Fix --*/
-[class*="col-"] {
-    padding: 1rem;
-}
 
 
 
