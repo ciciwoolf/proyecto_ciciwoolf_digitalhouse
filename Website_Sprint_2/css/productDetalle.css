@@ -8,140 +8,87 @@ html,body {
   font-family: 'Josefin Sans', sans-serif;
   background-color:  #fdfffc;
 }
+
 .navbar {
-  background-color:#20063B;
-  padding-bottom: 5px;
-  width: 100%;
-  height: 100px;
-  }
-
-.navbar-brand.navlogo {
-  height: 24px;
-}
-
-.navbar-brand.navlogo:hover {
-  opacity: .80;
-  color: #b4b4b4;
-}
-
-.nav-link.pages {
-  font-family: 'Josefin Sans', sans-serif;
-  color: #009FB7 !important;
-  font-size: 28px;
-}
-
-.nav-link.pages:hover {
-  opacity: .80;
-  color: #FFB60A !important;
-}
-
-.nav-link.login {
-  font-family: 'Josefin Sans', sans-serif;
-  color: #009FB7 !important;
-  font-size: 32px;
-  margin-bottom: 30px;
-}
-
-.nav-link.login:hover {
-  opacity: .80;
-  color: #FFB60A !important;
-}
-
-/*Carousel*/
-
-.carousel-inner img {
-    height: 10%;
+    background-color:#20063B;
+    padding-bottom: 5px;
     width: 100%;
-    padding-top: 50px;
-}
-
-.carousel-caption {
-  position: absolute;
-  top: 35%;
-  transform: translateY(-50%);
-  }
-
-.display-2 {
-  font-size: 12px important!;
-  text-transform: uppercase;
-  text-shadow: 1px 1px 10px #000;
-  font-family: 'Permanent Marker', cursive;
-  color: #fdfffc;
-  padding-top: 150px !important;
-}
-
-#compra {
-  background-color: #009FB7;
-  border: 1px solid #005866;
-  font-family: 'Permanent Marker', cursive;
-  font-size: larger;
-}
-
-#compra:hover {
-  background-color: #613DC1;
-}
-
-/*Jumbotron*/
-
-.jumbotron {
-  padding: 1rem;
-  border-radius: 0;
-}
-
-/* Welcome Section */
-
-.lead.origen {
-  text-align: justify;
-  padding-top: 2rem;
-  margin-left: 200px;  
-  font-size: 26px;
- }
-
-.lead {
-  text-align: center;
-  font-size: 32px !important;
-}
-
-.welcome {
-  width: 75%;
-  margin: 0 auto;
-  padding-top: 2rem;
-   }
-
-.welcome hr {
-  border-top: 2px solid #b4b4b4;
-  width: 95%;
-  margin-top: .3rem;
-  margin-bottom: 1rem;
+    height: 100px;
+    }
   
+  .navbar-brand.navlogo {
+    height: auto;
+  }
+  
+  .navbar-brand.navlogo:hover {
+    opacity: .80;
+    color: #b4b4b4;
+  }
+  
+  .nav-link.pages {
+    font-family: 'Josefin Sans', sans-serif;
+    color: #009FB7 !important;
+    font-size: 28px;
+  }
+  
+  .nav-link.pages:hover {
+    opacity: .80;
+    color: #FFB60A !important;
+  }
+  
+  .nav-link.login {
+    font-family: 'Josefin Sans', sans-serif;
+    color: #009FB7 !important;
+    font-size: 32px;
+    margin-bottom: 30px;
+  }
+  
+  .nav-link.login:hover {
+    opacity: .80;
+    color: #FFB60A !important;
+  }
+  
+
+
+/* Product Container */
+
+.container {
+    width:100%;
+    border-style: solid; 
+    border-width: 1px; 
+    border-color:#000;
+    margin:50px 25px 50px 25px;
+    padding-right: 25px;
 }
 
-/*3 Column Section */
-
- #headingthree {
-   font-size: 36px !important;
-   font-weight: bold;
-   padding-bottom: 10px;
- }
-
- #comment {
-   font-size: 28px !important;
- }
-
-#leaficon {
-  height: 2rem;  
+#product1 {
+    padding-left: 100px;
+    padding-top: 100px;
+    padding-bottom: 100px;  
+    width: auto;
 }
 
-/* Cards */
+#classic {    
+    float: left;
+    border-radius: 5px;
+    border: solid 10px #005866;  
+    height: 350px;    
+    width: 350px;
+}
 
-#producto {
- /* background-color: #20063B;*/
-  padding-bottom: 10px;
-  padding-top: 5px;
-  text-align: center;
-  border: 30px solid #20063B;
-  font-size: 26px !important;
+/*
+#classic:hover {
 
+}  */
+
+#description {
+    padding-top: 10vh;
+    size: 40px;
+    font-weight: bold;
+    margin-top: 75px;
+    float: right;
+    width: 50%;
+    height: 100%;
 }
 
 #compraCard {
@@ -152,64 +99,11 @@ html,body {
   text-shadow: #20063B 1px 0 10px;
 }
 
+
 #compraCard:hover {
-  background-color: #613DC1 ;
+  background-color: #FFB60A;  
 }
 
-.card-img-top {
-  width:100%;
-  border: 30px solid #20063B;
-  }
-
-  .card-img-top:hover {
-   opacity: .80;
-   
-   }
-   
-
-.borde {
-  background-color:white;
-  padding: 1em;
-}
-
-
-/* Visit*/
-
-/*
-.visitsection {
-  width:100%;
-  border-style: solid; 
-  border-width: 1px; 
-  border-color:#000;
-  margin:50px 25px 50px 25px;
-  padding-right: 25px;
-}
-
-
-
-#visit {
-  width: 100%;
-  background-color: #009FB7 !important;
-}
-
-#veni {
-  text-align: right;
-  color: #FFB60A;
-  font-size: 50px !important;
-  background-color: #20063B;
-}
-
-#fabrica {
-  border: 10px solid #613DC1;
-  margin-right: 2000px;  
-  margin-top: 50px;
-  margin-bottom: 50px;
-  height: 400px;
-  width: 400px;
-  
-}  
-
-*/
 
 /* Footer */
 

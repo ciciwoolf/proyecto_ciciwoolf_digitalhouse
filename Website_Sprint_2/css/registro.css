@@ -11,8 +11,9 @@ html,body {
 
 .navbar {
   background-color:#20063B;
-  padding-bottom: 20px;
-  width: auto;
+  padding-bottom: 5px;
+  width: 100%;
+  height: 100px;
   }
 
 .navbar-brand.navlogo {
@@ -32,6 +33,7 @@ html,body {
 
 .nav-link.pages:hover {
   opacity: .80;
+  color: #FFB60A !important;
 }
 
 .nav-link.login {
@@ -43,9 +45,15 @@ html,body {
 
 .nav-link.login:hover {
   opacity: .80;
+  color: #FFB60A !important;
 }
 
 /*Body*/
+#register {
+    font-family: 'Permanent Marker', cursive;
+    color: #FFB60A !important;
+    text-shadow: #20063B 1px 0 10px;
+}
 
 .container-fluid {
     margin: 0 auto;
@@ -53,6 +61,19 @@ html,body {
     margin: 0;
 }
 
+
+
 #forms {
     margin-top: 15px;
+    background-color:  #613DC1 !important;
+}
+
+#registerbtn {
+    font-family: 'Permanent Marker', cursive;
+    text-shadow: #20063B 1px 0 10px;
+}
+
+#registerbtn:hover {
+    
+    background-color: #20063B;
 }

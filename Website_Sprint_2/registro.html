@@ -16,7 +16,7 @@
 <body>
 <!--Barra de navegación-->
       <!--Aqui coloque la clase fixed-top para lograr dejar fijo el encabezado. Es como si realizamos un display: fixed-->
-    <nav id="navbar" class="navbar navbar-expand-md navbar-dark sticky-top" >
+    <nav id="navbar" class="navbar navbar-expand-md navbar-dark sticky-top" class="col-12">
 		    <a class="navbar-brand navlogo" href="/"><img src="img/logo.png" width="200px" height="150px"></a>
         	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           		<span class="navbar-toggler-icon"><i class=”fas fa-bars hamburger”></i></span>
@@ -59,17 +59,17 @@
   <body>
  
         <!-- Cuerpo principal -->
-        <section class="row">
+       <section class="row">
           <article class="col-12  card pt-5" >
                   <div class="card-body">
-                    <h2 class="card-title text-white bg-info text-center display-4 ">registráte</h2>
-                    <h4 class="text-center display-6" >creá tu cuenta ahora para poder comer tu chocolate! </h4>
+                    <h2 id="register" class="card-title text-white bg-info text-center display-4 ">registrate</h2>
+                    <h4 class="text-center display-6" >creá tu cuenta ahora para poder comer chocolate! </h4>
                   </div>
           </article>
-      </section>
+        </section>
 
         <section class="bg-home pt-4">
-            <div class="container">
+            <div id="containerbackground" class="container">
                 <div class="row" >
                     <div class="col-8 mx-auto bg-light ">
                         <div class="signup-form">
@@ -92,17 +92,17 @@
                                 <div class="form-group">
                                     <label class="checkbox-inline"><input type="checkbox" required="required"> Acepto los <a href="#">Terminos y condiciones</a> y las <a href="#">Políticas de Privacidad</a> de Mafci Chocolate Artesanal.</label>
                                 </div>
-                                <div class="form-group">
-                                    <button type="submit" class="btn btn btn-info">registráme!</button>
+                                <div class="text-center" class="form-group">
+                                    <button id="registerbtn" type="submit" class="btn btn btn-info">registrame!</button>
                                 </div>
                             </form>
-                            <div class="text-center my-3">ya tenés una cuenta? <a href="/login">iniciá sesión</a></div>
-                        </div>
+                          <div class="text-center my-3">ya tenés una cuenta? <a href="/login">iniciá sesión</a>
+                          </div>
+                       </div>
                     </div>                        
-                    </div>
-                </div>
-            </div>
-        </section>
+                  </div>
+              </div>
+          </section>
         
         <!-- Scripts para Bootstrap -->
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
