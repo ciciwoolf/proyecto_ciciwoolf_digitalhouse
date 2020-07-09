@@ -2,7 +2,7 @@
 ___
 
 + ## ___Acerca de___
-      Detalles comming soon!
+      Detalles coming soon! 
 ___
 
 + ## ___Publico Objetivo___
