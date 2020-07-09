@@ -175,41 +175,37 @@ html,body {
 
 /* Visit*/
 
-/*
+
 .visitsection {
   width:100%;
-  border-style: solid; 
-  border-width: 1px; 
-  border-color:#000;
-  margin:50px 25px 50px 25px;
-  padding-right: 25px;
+  background-color: #20063B;
 }
 
-
-
-#visit {
+#fabricabox {
+ 
+  margin-top: 25px;
+  margin-bottom: 25px;
+  margin-left: 25px;
+    
+}  
+#fabrica {
   width: 100%;
-  background-color: #009FB7 !important;
+  border: 10px solid #005866;
 }
 
 #veni {
   text-align: right;
   color: #FFB60A;
-  font-size: 50px !important;
+  margin-right: 200px;
+  margin-top: 100px;
+  font-size: larger!important;
   background-color: #20063B;
+  width: 50%;
+  height: 50%;
+  
 }
 
-#fabrica {
-  border: 10px solid #613DC1;
-  margin-right: 2000px;  
-  margin-top: 50px;
-  margin-bottom: 50px;
-  height: 400px;
-  width: 400px;
-  
-}  
 
-*/
 
 /* Footer */
 
@@ -257,8 +253,6 @@ hr.light {
 .nombre {
   margin-left: 700px;
 }
-
-
 
 /* Fixed background --Tiene que estar aca, al final de todo lo demas; no estoy segura porque...pero no muevas mas arriba por ahora  :-D*/
 

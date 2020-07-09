@@ -1,0 +1,351 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+html,body {
+  height: 100%;
+  width: 100%;
+  font-family: 'Josefin Sans', sans-serif;
+  background-color:  #fdfffc;
+}
+.navbar {
+  background-color:#20063B;
+  padding-bottom: 5px;
+  width: 100%;
+  height: 100px;
+  }
+
+.navbar-brand.navlogo {
+  height: 24px;
+}
+
+.navbar-brand.navlogo:hover {
+  opacity: .80;
+  color: #b4b4b4;
+}
+
+.nav-link.pages {
+  font-family: 'Josefin Sans', sans-serif;
+  color: #009FB7 !important;
+  font-size: 28px;
+}
+
+.nav-link.pages:hover {
+  opacity: .80;
+  color: #FFB60A !important;
+}
+
+.nav-link.login {
+  font-family: 'Josefin Sans', sans-serif;
+  color: #009FB7 !important;
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+.nav-link.login:hover {
+  opacity: .80;
+  color: #FFB60A !important;
+}
+
+/*Carousel*/
+
+.carousel-inner img {
+    height: 10%;
+    width: 100%;
+    padding-top: 50px;
+}
+
+.carousel-caption {
+  position: absolute;
+  top: 35%;
+  transform: translateY(-50%);
+  }
+
+.display-2 {
+  font-size: 12px important!;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 10px #000;
+  font-family: 'Permanent Marker', cursive;
+  color: #fdfffc;
+  padding-top: 150px !important;
+}
+
+#compra {
+  background-color: #009FB7;
+  border: 1px solid #005866;
+  font-family: 'Permanent Marker', cursive;
+  font-size: larger;
+}
+
+#compra:hover {
+  background-color: #613DC1;
+}
+
+/*Jumbotron*/
+
+.jumbotron {
+  padding: 1rem;
+  border-radius: 0;
+}
+
+/* Welcome Section */
+
+.lead.origen {
+  text-align: justify;
+  padding-top: 2rem;
+  margin-left: 200px;  
+  font-size: 26px;
+ }
+
+.lead {
+  text-align: center;
+  font-size: 32px !important;
+}
+
+.welcome {
+  width: 75%;
+  margin: 0 auto;
+  padding-top: 2rem;
+   }
+
+.welcome hr {
+  border-top: 2px solid #b4b4b4;
+  width: 95%;
+  margin-top: .3rem;
+  margin-bottom: 1rem;
+  
+}
+
+/*3 Column Section */
+
+ #headingthree {
+   font-size: 36px !important;
+   font-weight: bold;
+   padding-bottom: 10px;
+ }
+
+ #comment {
+   font-size: 28px !important;
+ }
+
+#leaficon {
+  height: 2rem;  
+}
+
+/* Cards */
+
+#producto {
+ /* background-color: #20063B;*/
+  padding-bottom: 10px;
+  padding-top: 5px;
+  text-align: center;
+  border: 30px solid #20063B;
+  font-size: 26px !important;
+
+}
+
+#compraCard {
+  font-size: larger;
+  background-color: #005866;
+  color: white;
+  font-family: 'Permanent Marker', cursive;
+  text-shadow: #20063B 1px 0 10px;
+}
+
+#compraCard:hover {
+  background-color: #613DC1 ;
+}
+
+.card-img-top {
+  width:100%;
+  border: 30px solid #20063B;
+  }
+
+  .card-img-top:hover {
+   opacity: .80;
+   
+   }
+   
+
+.borde {
+  background-color:white;
+  padding: 1em;
+}
+
+
+/* Visit*/
+
+
+.visitsection {
+  width:100%;
+  background-color: #20063B;
+}
+
+#fabricabox {
+ 
+  margin-top: 25px;
+  margin-bottom: 25px;
+  margin-left: 25px;
+    
+}  
+#fabrica {
+  width: 100%;
+  border: 10px solid #005866;
+}
+
+#veni {
+  text-align: right;
+  color: #FFB60A;
+  margin-right: 200px;
+  margin-top: 100px;
+  font-size: larger!important;
+  background-color: #20063B;
+  width: 50%;
+  height: 50%;
+  
+}
+
+
+
+/* Footer */
+
+#footer1 {
+  width: cover;
+  background-image:url('../img/footer.png');
+  background-size: cover;
+  color: #FFB60A;
+  font-family: 'Josefin Sans', sans-serif;
+  padding-top: 2rem;
+  font-size: 18px !important;
+  
+}
+
+#footerlogo {
+  height: 150px;
+  
+}
+
+#contact {
+ margin-left: 800px;
+ text-align: center;
+}
+
+#contactinfo1 {
+  font-size: larger;
+}
+
+#contactinfo2 {
+  font-size: larger;
+}
+
+hr.light {
+  border-top: 1px solid #d5d5d5;
+  width: 75%;
+  margin-top: .8rem;
+  margin-bottom: 1rem;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.exampleInputEmail1 {
+  margin-right: 700px;
+}
+
+.nombre {
+  margin-left: 700px;
+}
+
+/* Fixed background --Tiene que estar aca, al final de todo lo demas; no estoy segura porque...pero no muevas mas arriba por ahora  :-D*/
+
+
+figure {
+  position: relative;
+  width: 100%;
+  height: 60%;
+  margin: 0!important;
+  opacity: .8;
+}
+.fixed-wrap {
+  clip: rect(0, auto, auto, 0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+#fixed {
+  background-image: url('../img/figure.png');
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+  will-change: transform;
+}
+
+
+
+
+/*---Media Queries --*/
+@media (max-width: 992px) {
+
+}
+@media (max-width: 768px) {
+  
+}
+@media (max-width: 576px) {
+  
+}
+
+
+/*---Firefox Bug Fix --*/
+
+/*
+.carousel-item {
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+  -webkit-backface-visibility: visible;
+  backface-visibility: visible;
+}
+*/
+
+
+
+
+/*
+Extra small (xs) devices (portrait phones, less than 576px)
+No media query since this is the default in Bootstrap
+
+Small (sm) devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
+
+Medium (md) devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+Large (lg) devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+Extra (xl) large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
+*/
+
+
+
+/* Coolors
+
+https://coolors.co/001011-ffb60a-613dc1-009fb7-20063b
+
+#001011   (Negro, mas o menos)
+#FFB60A    (amarillo)
+#613DC1     (purpura)
+#009FB7     (turquesa)
+#20063B     (berenja purpura, oscuro)
+
+
+
+
