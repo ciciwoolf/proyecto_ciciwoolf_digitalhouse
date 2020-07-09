@@ -1,19 +1,16 @@
 const path = require('path');
 const fs = require('fs');
 
-let relojes =  JSON.parse(fs.readFileSync(path.resolve(__dirname,'..','data','relojes.json')));
+//let chocolates =  JSON.parse(fs.readFileSync(path.resolve(__dirname,'..','data','chocolates.json'))); //
 
 
 module.exports = {
     index: function(req,res){
-        //res.sendFile(path.resolve(__dirname, '..', 'views','web','index.html'));
-        res.render(path.resolve(__dirname, '..', 'views','web','index'),{relojes});
+        res.render(path.resolve(__dirname, '..', 'views','web','index'),{chocolates});  
     },
-    nosotros: function(req,res){
-        res.sendFile(path.resolve(__dirname, '..', 'views','web','nosotros.html'))
-    },
-    contacto: function(req,res){
-        res.sendFile(path.resolve(__dirname, '..', 'views','web','contacto.html'))
+
+    show: function(req,res){
+        res.render(path.resolve(__dirname, '..', 'views','web','productDetalle'),{chocolates});  
     }
 
 }

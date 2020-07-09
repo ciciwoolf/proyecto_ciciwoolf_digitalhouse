@@ -1,4 +1,4 @@
-const express = require('express');
+/* const express = require('express');
 const router = express.Router();
 const path = require('path');
 
@@ -6,4 +6,4 @@ const controllersProducto = require(path.resolve(__dirname, '..', 'controllers',
 
 router.get('/productos', controllersProducto.index);
 
-module.exports = router;
+module.exports = router;  */

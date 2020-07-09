@@ -2,9 +2,11 @@ const path = require('path');
 
 module.exports = {
     registro: function (req,res){
-        res.sendFile(path.resolve(__dirname, '..', 'views', 'usuarios', 'registro.html'));
+        res.render(path.resolve(__dirname, '..', 'views', 'users', 'registro'));
     },
-    login: function(req,res){
-        res.sendFile(path.resolve(__dirname,'..','views','usuarios','login.html'))
+
+    cartshow: function (req,res){
+    res.render(path.resolve(__dirname, '..', 'views', 'users', 'productCart'));
     }
+
 }
