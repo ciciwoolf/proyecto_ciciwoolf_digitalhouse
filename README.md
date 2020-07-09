@@ -2,7 +2,7 @@
 ___
 
 + ## ___Acerca de___
-
+      Detalles comming soon!
 ___
 
 + ## ___Publico Objetivo___
