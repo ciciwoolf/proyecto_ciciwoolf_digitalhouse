@@ -1,0 +1,116 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+html,body {
+  height: 100%;
+  width: 100%;
+  font-family: 'Josefin Sans', sans-serif;
+  background-color:  #fdfffc;
+}
+.navbar {
+  background-color:#20063B;
+  padding-bottom: 5px;
+  width: 100%;
+  height: 100px;
+  }
+
+.navbar-brand.navlogo {
+  height: 24px;
+}
+
+.navbar-brand.navlogo:hover {
+  opacity: .80;
+  color: #b4b4b4;
+}
+
+.nav-link.pages {
+  font-family: 'Josefin Sans', sans-serif;
+  color: #009FB7 !important;
+  font-size: 28px;
+}
+
+.nav-link.pages:hover {
+  opacity: .80;
+  color: #FFB60A !important;
+}
+
+.nav-link.login {
+  font-family: 'Josefin Sans', sans-serif;
+  color: #009FB7 !important;
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+.nav-link.login:hover {
+  opacity: .80;
+  color: #FFB60A !important;
+}
+
+body {
+    background: #eecda3;
+    background: -webkit-linear-gradient(to right, #009FB7, #613DC1);
+    background: linear-gradient(to right, #009FB7, #613DC1);
+    min-height: 100vh;
+  }
+
+.table {
+    margin-top: 50px;
+}
+
+
+/* Footer */
+
+#footer1 {
+    width: 100%;
+    background-image:url('../img/footer.png');
+    background-size: cover;
+    color: #FFB60A;
+    font-family: 'Josefin Sans', sans-serif;
+    padding-top: 2rem;
+    font-size: 18px !important;
+    
+  }
+  
+  #footerlogo {
+    height: 150px;
+    
+  }
+  
+  #contact {
+   margin-left: 800px;
+   text-align: center;
+  }
+  
+  #contactinfo1 {
+    font-size: larger;
+  }
+  
+  #contactinfo2 {
+    font-size: larger;
+  }
+  
+  hr.light {
+    border-top: 1px solid #d5d5d5;
+    width: 75%;
+    margin-top: .8rem;
+    margin-bottom: 1rem;
+    font-family: 'Josefin Sans', sans-serif;
+  }
+  
+  /*.exampleInputEmail1 {
+    margin-right: 450px;
+  }
+  
+  .nombre {
+    margin-left: 450px;
+  }
+*/
+  /*
+#001011   (Negro, mas o menos)
+#FFB60A    (amarillo)
+#613DC1     (purpura)
+#009FB7     (turquesa)
+#20063B     (berenja purpura, oscuro)
+*/
