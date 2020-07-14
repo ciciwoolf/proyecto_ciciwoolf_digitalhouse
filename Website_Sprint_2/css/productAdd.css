@@ -30,8 +30,7 @@ html,body {
   font-family: 'Josefin Sans', sans-serif;
   color: #009FB7 !important;
   font-size: 32px;
-  margin-bottom: 30px;
-  margin-left: 700px !important;  /*Why doesn't this move to the right? 
+  right: 0 !important;
 }
 
 #inicio:hover {
@@ -39,12 +38,10 @@ html,body {
   color: #FFB60A !important;
 }
 
-body {
-    background: #eecda3;
-    background: -webkit-linear-gradient(to right, #009FB7, #613DC1);
-    background: linear-gradient(to right, #009FB7, #613DC1);
-    min-height: 100vh;
-  }
+#article {
+  padding-right: 0px !important; 
+  padding-left: 0px !important; 
+}
 
 .table {
     margin-top: 50px;
