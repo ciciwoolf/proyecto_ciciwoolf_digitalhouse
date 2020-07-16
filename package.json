@@ -1,13 +1,13 @@
 {
-  "name": "site_code",
+  "name": "proyecto_ciciwoolf_digitalhouse",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "test nodemon src/index.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Cici Woolf",
   "license": "ISC",
   "devDependencies": {
     "bcrypt": "^5.0.0",
