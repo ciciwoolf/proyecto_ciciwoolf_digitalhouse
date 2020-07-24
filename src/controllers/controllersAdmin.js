@@ -1,11 +1,11 @@
 const path = require('path');
 const fs = require('fs');
 
-//let chocolates =  JSON.parse(fs.readFileSync(path.resolve(__dirname,'..','data','chocolates.json')));//
+let chocolates =  JSON.parse(fs.readFileSync(path.resolve(__dirname,'..','data','products.json')));
 
 
 module.exports = {
     productAdd: (req,res) =>{
-        res.render(path.resolve(__dirname, '..', 'views', 'admin', 'productAdd'),{chocolates});
+        res.render(path.resolve(__dirname, '..', 'views', 'admin', 'productAdd'),{products});
     }
 }

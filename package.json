@@ -1,7 +1,7 @@
 {
   "name": "proyecto_ciciwoolf_digitalhouse",
   "version": "1.0.0",
-  "description": "",
+  "description": "___",
   "main": "app.js",
   "scripts": {
     "test": "test nodemon src/index.js"
@@ -15,6 +15,15 @@
     "nodemon": "^2.0.4"
   },
   "dependencies": {
+    "core-util-is": "^1.0.2",
     "ejs": "^3.1.3"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ciciwoolf/proyecto_ciciwoolf_digitalhouse.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ciciwoolf/proyecto_ciciwoolf_digitalhouse/issues"
+  },
+  "homepage": "https://github.com/ciciwoolf/proyecto_ciciwoolf_digitalhouse#readme"
 }

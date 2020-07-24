@@ -1,0 +1,50 @@
+[
+    {
+      "id": 1,
+      "nombre": "Chocolate Oscuro 'The Classic'",
+      "descripcion": "Aquí está el mejor chocolate oscuro que jamás vos probarás en tu vida. Notas de frambuesa, Malbec de Mendoza, leña de Colorado y manzanas verdes tentarán sus papilas gustativas.",
+      "precio": 250,
+      "descuento": "0",
+      "imagen": "prod1.png"
+    },
+    {
+      "id": 2,
+      "nombre": "Chocolate de Macadamia",
+      "descripcion": "Nunca probaste vos un chocolate amargo tan cremoso con nueces de macadamia.¡Los monos estarán celosos de vos cuando te vean devorando este!",
+      "precio": 250,
+      "descuento": "0",
+      "imagen": "prod2.png"
+    },
+    {
+      "id": 3,
+      "nombre": "Chocolate Oscuro con Menta",
+      "descripcion": "Esta es la barra perfecta despues de terminar una comida o una dieta detox. Menta, bueno para tu cuerpo; y lujoso chocolate negro, bueno para tu alma eterna.",
+      "precio": 250,
+      "descuento": "0",
+      "imagen": "prod3.png"
+    },
+    {
+      "id": 4,
+      "nombre": "Chocolate Caliente 'Jungla'",
+      "descripcion": "Esta receta de chocolate caliente es de la selva: espesa, orgánica, con sabor a nueces y fuego. ¡Una bebida de los dioses que seguramente dará un comienzo re ardiente a tu día!",
+      "precio": "350",
+      "descuento": "0",
+      "imagen": "prod4.png"
+    },
+    {
+      "id": 5,
+      "nombre": "Chocolate con Frambuesas",
+      "descripcion": "El chocolate amargo con toques de frambuesas ácidas te dejará con energía y una sensación re brillante.",
+      "precio": "250",
+      "descuento": "0",
+      "imagen": "prod5.png"
+    },
+    {
+      "id": 6,
+      "nombre": "Trufas Whisky",
+      "descripcion": "Chocolate amargo con una gotita de whisky dulce, nada mas y nada menos que pura delicia.",
+      "precio": "400",
+      "descuento": "0",
+      "imagen": "prod3.png"
+    }
+  ]

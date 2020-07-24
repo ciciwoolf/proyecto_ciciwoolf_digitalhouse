@@ -1,28 +1,100 @@
-/* Footer */
 
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 
-/* Footer */
 
- #img-footer {
-    background-image:url('../img/footer.png');
-    min-height: 40vh;
-  }
-  
-  #footerlogo {
-    height: 150px;
-  }
-  
- #contact2 {
-    color: #FFB60A;
-    font-family: 'Josefin Sans', sans-serif;
-    padding-top: 2rem;
-    font-size: 18px !important;
-    text-align: auto;
+
+
+
+footer {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  background-image:url('../img/footer.png');
+  font-family: 'Josefin Sans', sans-serif;
+  text-align: justify;
+  box-sizing: border-box;
   }
 
-  .footerlogo {
-    height: 150px !important;
+ .main-content {
+     display: flex;
+ }
+
+ .main-content .box{     /* This styles all classes that contain the word box, too?*/
+     flex-basis: 50%;
+     padding: 20px 10px;
+     margin-left: 50px;
+ }
+
+
+.box h2 {
+    font-family: 'Josefin Sans', sans-serif !important;
+    color: whitesmoke;
+    font-size: 1.125rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-top: 1rem;
+}
+
+.box .content {
+    margin: 20px 0 0 0; 
+    color: whitesmoke;
+}
+
+.content {
+    text-align: justify;
+}    
+
+.fab fa-facebook{
     
-  }
+    margin-top: 20px;
+    margin-left: 30px;
+}
+
+
+
+
+/*---Media Queries --*/
+@media (max-width: 960px) {
+
+}
+@media (max-width: 768px) {
   
+}
+@media (max-width: 576px) {
+  
+}
+
+
+/*
+Extra small (xs) devices (portrait phones, less than 576px)
+No media query since this is the default in Bootstrap
+
+Small (sm) devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
+
+Medium (md) devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+Large (lg) devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+Extra (xl) large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
+*/
+
+
+
+/* Coolors
+
+https://coolors.co/001011-ffb60a-613dc1-009fb7-20063b
+
+#001011   (Negro, mas o menos)
+#FFB60A    (amarillo)
+#613DC1     (purpura)
+#009FB7     (turquesa)
+#20063B     (berenja purpura, oscuro)
+
+
+
+

@@ -1,8 +1,8 @@
 const path = require('path');
 
 module.exports = {
-    registro: function (req,res){
-        res.render(path.resolve(__dirname, '..', 'views', 'users', 'registro'));
+    register: function (req,res){
+        res.render(path.resolve(__dirname, '..', 'views', 'users', 'register'));
     },
 
     cartshow: function (req,res){

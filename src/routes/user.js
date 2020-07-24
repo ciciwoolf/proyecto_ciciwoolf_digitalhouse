@@ -4,7 +4,8 @@ const path = require('path');
 
 const controllersUser = require(path.resolve(__dirname, '..', 'controllers', 'controllersUser'));
 
-router.get('/registro', controllersUser.registro);
+router.get('/register', controllersUser.register);
+
 router.get('/productCart', controllersUser.cartshow);
 //router.get('/login', controllersUser.login);
 

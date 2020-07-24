@@ -14,7 +14,6 @@ const path = require('path');
 const controllersWeb = require(path.resolve(__dirname, '..', 'controllers', 'controllersWeb'));
 //Armo mis rutas
 router.get('/', controllersWeb.index);
-router.get('/productDetalle', controllersWeb.show);
-//router.get('/nosotros', controllersWeb.registro);
-//router.get('/contacto', controllersWeb.productCart);
+router.get('/productDetail', controllersWeb.show);
+
 module.exports = router;
