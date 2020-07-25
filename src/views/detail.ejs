@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('/partials/head.ejs') %> 
+
+<body>
+	
+<%- include('/partials/navBar.ejs') %>	
+    
+<!--Product Details-->
+
+  <div class="container" class="col-sm-12 col-md-6 col-lg-4">
+		<div class="row">
+      		<section class="card-body" id="product" class="col-sm-12 col-md-6 col-lg-4">
+		  		<img src="img/<%=detailChocolate.imagen%>" id="prod">      
+      		</section>
+       		 <section class="card-body" id="description" class="col-sm-12 col-md-6 col-lg-4">
+         		 <h2><b><%=detailChocolate.nombre%> </b></h2>
+         		 <h3><%=detailChocolate.precio%> </h3>
+         		 <p><%=detailChocolate.descripcion%>  </p>
+          		<a href="#" id="compraCard" class="btn btn-outline-secondary">Comprá</a>
+       		 </section>
+      	</div>
+	</div>
+
+	<%- include('/partials/footer.ejs') %> 
+
+</body>
+</html>

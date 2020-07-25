@@ -1,27 +1,33 @@
 
 const express = require('express');
+const bodyParser = require("body-parser");
 const app = express();
 const path = require('path');
+const _ = require("lodash");
+const multer = require('multer');
+const methodOverride = require('method-override');
 
+/*  --Donde se coloca este variable?
+const storage = multer.diskStorage({
+    destination: function (req, file, cb) {
+      cb(null, path.resolve(__dirname,'..','..','public','img'));
+    },
+    filename: function (req, file, cb) {
+      cb(null, 'prod-' + Date.now()) //need to configure
+    }
+  })
+   
+  const upload = multer({ storage: storage })   */
 
-//Para indicarle express la carpeta donde se encuentran los archivos estáticos
+app.use(methodOverride('_method'));
 app.use(express.static(path.resolve(__dirname, '..', 'public')));
-//Debemos indicar cual es el motor de plantillas que estamos usando EJS
 app.set('view engine','ejs');
 
+app.use(express.urlencoded({ extended: true })); 
 
 //Requerir las rutas
-const adminRoutes = require('./routes/admin');
-//const productoRoutes = require('./routes/producto');
-const userRoutes = require('./routes/user');
-const webRoutes = require('./routes/web');
-
-
-//Para usar las rutas
+const adminRoutes = require('./routes/route');//decidi tener solo un archivo con las rutas porque me gustar ver todas a la vez
 app.use(adminRoutes);
-//app.use(productoRoutes);
-app.use(userRoutes);
-app.use(webRoutes);
 
 //Levantar servidor
 app.listen(3000, 'localhost', ()=> console.log('Servidor corriendo en el puerto 3000'));
