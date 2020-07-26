@@ -91,7 +91,36 @@
 	</div>
 </figure>
 
- <!--- Cards -->
+	  
+<!--Listado de nuestros productos-->
+	<section class="row">
+
+        <article class="col-12">
+          <h2 class="display-4 text-white bg-info text-center ">Nuestros chocolates</h2>
+		</article>
+		
+        <% for(let i= 0; i < products.length; i++){ %>
+            <article class="col-12 col-md-6 col-lg-3 card p-2">
+              <figure >
+                <img  src="images/chocolates/<%= products[i].image%> " class="card-img-top w-100 d-block" alt="Chocolate">
+              </figure>
+                <% if (products[i].discount == 30) { %>
+                  <img class="descuento" src="img/promo30.png" alt="Descuento 30%">  
+                <% }else if(products[i].discount == 15 ){ %>
+                  <img class="descuento" src="img/promo15.png" alt="Descuento 30%">
+                <% } %>
+              <div class="card-body">
+                <h5 class="card-title"><%= products[i].nombre%></h5>
+                <h5 class="card-title" >$  <%= products[i].precio%> </h5>
+                <p class="card-text descripcion"><%= products[i].descripcion%> </p>
+                <a href="#" class="btn btn-primary">Ver detalle</a>
+              </div>
+            </article>
+          <% } %>                   
+	  </section>
+
+
+<!--  
 <div id="producto" class="container-fluid padding">
 	<div class="row">
 		<div class="col-md-4">
@@ -102,7 +131,7 @@
 						<h4 class="card-title">Chocolate Oscuro "The Classic"</h4>
 						<p class="card-text">$250</p>
 						<a href="#" id="compraCard" class="btn btn-outline-secondary">Comprá</a>
-					</div> <!--Make this href go to product page of The Classic-->
+					</div> 
 				</div>
 			</div>
 		</div>
@@ -176,7 +205,7 @@
 	</div>
 </div>
 
-<!--Visit Section
+Visit Section
 	<div id="visitsection" class="container-fluid padding" class="col-sm-12 col-md-6 col-lg-4">
 		<div class="row">
       		<section id="fabricabox" class="card-body" class="col-sm-12 col-md-6 col-lg-4">
@@ -187,9 +216,8 @@
 				<h2>Av. Lobos 1234, Belgrano, CABA.</h4>	
        		 </section>
      	 </div> 
-	</div>  -->	
-
-
+	</div>  
+-->	
 
 <%- include('/partials/footer.ejs') %>
 
