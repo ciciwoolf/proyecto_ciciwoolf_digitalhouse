@@ -23,7 +23,7 @@ module.exports = {
         res.render(path.resolve(__dirname, '..', 'views', 'index')); //home page
         },
 
-         list: (req,res) =>{        
+        list: (req,res) =>{        
                products = JSON.parse(fs.readFileSync('../data/products.json'));    
         
                res.render(path.resolve(__dirname, '..', 'views', 'index.ejs'), { products });

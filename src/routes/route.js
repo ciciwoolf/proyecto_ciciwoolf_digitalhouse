@@ -30,8 +30,7 @@ const controller = require(path.resolve(__dirname, '..', 'controllers', 'control
 
 
 router.get('/', controller.home); //va a la pagina index.ejs
-//router.get('/controller', controller.index); //Va a la pagina de Admin
-router.get('/', controller.list); //Sprint 3 Ruta 1
+router.get('/products', controller.list); //Sprint 3 Ruta 1
 router.get('/administrar/create', controller.create); //Sprint 3 Ruta 2
 router.get('/detail/:id', controller.show); //Sprint 3 Ruta 3
 router.post('/administrar/create', controller.save);  //Sprint 3 Ruta 4
