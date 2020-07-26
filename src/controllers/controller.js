@@ -141,28 +141,7 @@ module.exports = {
                 res.redirect('/admin');      
         },
                 
-        updateHabanos(req,res){
-                let productoHabanos = JSON.parse(fs.readFileSync(path.resolve(__dirname,"..", "data","habanos.json")));
-                //Como por la ruta esta viajando de manera dinamica un ID hay que guardarla en una variable para poder utilizarla 
-                req.body.id = req.params.id;
-            
-                req.body.imagen = req.file ? req.file.filename : req.body.oldImagen;
-                //Aca voy a contener el nuevo habano que ya se actualizo
-                let habanoUpdate = productoHabanos.map(productoHabano => {
-                    if(productoHabano.id == req.body.id){
-                        return productoHabano = req.body;
-                    }
-                    return productoHabano;
-                });
-                let habanosActualizar = JSON.stringify(habanoUpdate,null,2)
-                //Aqui sobre escribo nuestro archivo Json para guardar los nuevos productos
-                fs.writeFileSync(path.resolve(__dirname,'..','data','habanos.json'),habanosActualizar);
-                //Aqui redireccionamos los nuevos productos a la vista administrar
-                res.redirect('/admin');      
-
-        },
-
-        eliminate: (req, res) => {
+          destroy: (req, res) => {
           
             const elimId = _.lowerCase(req.params.id);
            
