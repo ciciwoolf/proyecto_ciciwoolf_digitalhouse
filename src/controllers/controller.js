@@ -15,7 +15,7 @@ var products = JSON.parse(rawdata);
 
 module.exports = {
 
-            test: (req,res) =>{
+        test: (req,res) =>{
             console.log("corriendo las rutas? si!"); //pero quiza todavia no :/
         },
 
@@ -123,22 +123,23 @@ module.exports = {
 
         update: (req, res)=>{
             
-                let products = JSON.parse(fs.readFileSync(path.resolve(__dirname,"..", "data","products.json")));
+          let products = JSON.parse(fs.readFileSync(path.resolve(__dirname,"..", "data","products.json")));
               
-                req.body.id = req.params.id;              
-                req.body.imagen = req.file ? req.file.filename : req.body.oldImagen;
+              req.body.id = req.params.id;              
+              req.body.imagen = req.file ? req.file.filename : req.body.oldImagen;
                
-                let updatedProduct = products.map(chocolate => {
+              let updatedProduct = products.map(chocolate => {
                     if(chocolate.id == req.body.id){
                         return chocolate = req.body;
                     }
                     return chocolate;
                 });
-                let productsUpdate = JSON.stringify(updatedProduct,null,2)
+              let productsUpdate = JSON.stringify(updatedProduct,null,2)
                 
                 fs.writeFileSync(path.resolve(__dirname,'..','data','products.json'),productsUpdate);
                 
-                res.redirect('/admin');      
+                res.redirect('/admin'); 
+
         },
                 
           destroy: (req, res) => {

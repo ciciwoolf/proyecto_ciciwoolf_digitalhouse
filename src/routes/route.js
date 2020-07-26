@@ -30,18 +30,15 @@ const controller = require(path.resolve(__dirname, '..', 'controllers', 'control
 router.get('/test', controller.test);
 router.get('/', controller.home); //va a la pagina index.ejs
 router.get('/products', controller.list); //Sprint 3 Ruta 1
-router.get('/administrar/create', controller.create); //Sprint 3 Ruta 2
-router.get('/administrar/detail/:id', controller.show); //Sprint 3 Ruta 3
+router.get('/administrar/create', controller.create); //Sprint 3 Ruta 2-- admin.ejs completed
+router.get('/administrar/detail/:id', controller.show); //Sprint 3 Ruta 3 --admin.ejs completed
 router.post('/administrar/create', controller.save);  //Sprint 3 Ruta 4
 router.post('/administrar/create', upload.any('imagen'), controller.save); //no estoy segura que sea correcto
-router.get('/administrar/edit/:id', controller.edit); //Sprint 3 Ruta 5
+router.get('/administrar/edit/:id', controller.edit); //Sprint 3 Ruta 5--admin.ejs completed
+//router.put('/administrar/edit/:id', upload.single('imagen'), controllersAdmin.update); Add method into controller
 router.put('/administrar/detail/:id', controller.update); //Sprint 3 Ruta 6
-router.delete('/administrar/delete/:id', controller.destroy); //Sprint 3 Ruta 7
+router.get('/administrar/delete/:id', controller.destroy); //Sprint 3 Ruta 7--admin.ejs completed
 
 
-
-router.get('/administrar/delete/:id', controllersAdmin.destroy);
-router.get('/administrar/edit/:id', controllersAdmin.edit);
-router.put('/administrar/edit/:id', upload.single('imagen'), controllersAdmin.update);
 
 module.exports = router;
