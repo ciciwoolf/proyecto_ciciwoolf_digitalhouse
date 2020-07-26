@@ -2,27 +2,7 @@ const express = require('express');
 const router = express.Router();
 const path = require('path');
 const _ = require("lodash");
-const multer = require('multer');/*Middleware: Multer is a node.js middleware for handling multipart/form-data, which is primarily used for uploading files. It is written on top of busboy for maximum efficiency.
 
-NOTE: Multer will not process any form which is not multipart (multipart/form-data). */
-
-
-const mantenimiento = require(path.resolve(__dirname,'../middlewares/mantenimiento'));//maintenance middleware
-
-const storage = multer.diskStorage({
-    destination: function (req, file, cb) {
-      cb(null, path.resolve(__dirname, '..','..','public','images','relojes'));
-    },
-    filename: function (req, file, cb) {
-      cb(null, 'reloj-'+Date.now() + path.extname(file.originalname));
-    }
-  });
-  
-  const upload = multer({ storage });
-  
-  const controllersAdmin = require(path.resolve(__dirname, '..', 'controllers', 'controllersAdmin'));
-  
-  router.get('/administrar', mantenimiento, controllersAdmin.index);
 
 //controller
 const controller = require(path.resolve(__dirname, '..', 'controllers', 'controller'));
