@@ -1,0 +1,42 @@
+[
+  {
+    "nombre": "Daniel",
+    "apellido": "Fuentes",
+    "email": "cedavilu@gmail.com",
+    "password": "$2a$10$8Mz0oSQb/yrEu7BK87e8/ux/pOTy6tBP7004m0LyKfdDB11QPKZ16",
+    "avatar": "foto-1595560366110.png",
+    "role": 1
+  },
+  {
+    "nombre": "Sergio",
+    "apellido": "Hernandez Rodriguez",
+    "email": "shernandezrg@gmail.com",
+    "password": "$2a$10$4zhJXgWDZGKtBAo56p7.qeNqABXMRadrDz7ZPTcnypXECfqgeZ2uy",
+    "avatar": "picture-1596421394649.jpg",
+    "role": 9
+  },
+  {
+    "nombre": "Cici",
+    "apellido": "Woolf",
+    "email": "christinemarie.woolf@gmail.com",
+    "password": "$2a$10$qEzHcxGsI3C1V5t46W74JO6mSRPgZ6EzRc6fERqjqGnVmc3UNXnjW",
+    "avatar": "foto-1596507247860.png",
+    "role": 9
+  },
+  {
+    "nombre": "Pam",
+    "apellido": "Gillig",
+    "email": "pamela.gillig@gmail.com",
+    "password": "$2a$10$X3L08a53W3Bb4rlI5iZXae05CidVj2g/RfzO/WB8XOePkg2ZiJI5m",
+    "avatar": "foto-1596760014973.jfif",
+    "role": 9
+  },
+  {
+    "nombre": "Marvin",
+    "apellido": "Jelly",
+    "email": "ciciwoolf@gmail.com",
+    "password": "$2a$10$GdJr7/GntGuKHS7eBkNwsODLfd2X2aYvkhCXbqGj0DCZhA5UUlzaq",
+    "avatar": "foto-1596848010206.jfif",
+    "role": 1
+  }
+]

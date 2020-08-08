@@ -2,49 +2,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Permanent+Marker&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 
-
-
-
-
-footer {
+.footer {
   position: absolute;
   bottom: 0px;
   width: 100%;
-  background-image:url('../img/footer.png');
+  background-image:url('../img/footer.png') !important;
   font-family: 'Josefin Sans', sans-serif;
   text-align: justify;
   box-sizing: border-box;
   }
 
- .main-content {
-     display: flex;
- }
-
- .main-content .box{     /* This styles all classes that contain the word box, too?*/
-     flex-basis: 50%;
-     padding: 20px 10px;
-     margin-left: 50px;
- }
-
-
-.box h2 {
-    font-family: 'Josefin Sans', sans-serif !important;
-    color: whitesmoke;
-    font-size: 1.125rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    margin-top: 1rem;
+  #footerlogo {
+      margin-left: 50px;
+  }
+.row {
+    margin-right: 0px;
+    margin-left: 0px;
 }
-
-.box .content {
-    margin: 20px 0 0 0; 
-    color: whitesmoke;
-}
-
-.content {
-    text-align: justify;
-}    
-
 .fab fa-facebook{
     
     margin-top: 20px;

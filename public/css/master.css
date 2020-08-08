@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+html body {
+    margin: 0;
+    min-height: 100%;
+    font-family: 'Josefin Sans', sans-serif !important;
+    width: 100%;
+          
+  }
+  
+  .navbar {
+    background-color:#20063B !important;
+    padding-bottom: 5px;
+    width: 100%;
+    height: 150px;
+    padding-right: 0px;
+    padding-left: 0px;
+    }
+  
+
+    #img-logo:hover {
+    opacity: .80;
+    color: #b4b4b4;
+  }
+  
+  .nav-link.pages {
+    font-family: 'Josefin Sans', sans-serif;
+    color: #009FB7 !important;
+    font-size: 32px;
+  }
+  
+  .nav-link.pages:hover {
+    opacity: .80;
+    color: #FFB60A !important;
+  }
+  
+  .nav-link.login {
+    font-family: 'Josefin Sans', sans-serif;
+    color: #009FB7 !important;
+    font-size: 32px;
+    margin-bottom: 30px;
+    padding-top: 3rem;
+  }
+  
+  .nav-link.login:hover {
+    opacity: .80;
+    color: #FFB60A !important;
+  }
+  
+
+
+  h2 {
+    padding-top: .5rem;
+  }
+
+
+.container-fluid{
+    margin: 0 auto;
+    padding: 0;
+    margin-top: 1rem;
+    font-family: 'Josefin Sans', sans-serif !important;
+}
+
+#navbarSupportedContent{
+    font-family: 'Josefin Sans', sans-serif !important;
+
+}
+
+.misH1{
+    text-align: center;
+    color: red;
+    font-size: 2rem;
+    font-family: 'Josefin Sans', sans-serif !important;
+}
+
+/*Aquí dispuse nuestros mismos css que tenidamos en nuestra clase 3, lo realice sólo para que vean que podemos sin ningún problema, combinar como deseemos nuestros conocimientos de maquetación ahora con Bootstrap*/
+article img{
+    width: 100%;
+    opacity: 1;
+}
+
+article img:hover{
+    opacity: 0.8;
+}
+p{
+    text-align: justify;
+}
+
+
+.descuento{
+    right: 15px;
+    top: 20px;
+    position: absolute;
+    width: 20%;
+}
+
+.descripcion{
+    min-height: 10vh;
+    font-family: 'Josefin Sans', sans-serif !important;
+}

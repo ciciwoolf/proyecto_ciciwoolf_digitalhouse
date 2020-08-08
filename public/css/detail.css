@@ -61,14 +61,14 @@ html,body {
     padding-right: 25px;
 }
 
-#product {
+#product1 {
     padding-left: 100px;
     padding-top: 100px;
     padding-bottom: 100px;  
     width: auto;
 }
 
-#prod{    
+#classic {    
     float: left;
     border-radius: 5px;
     border: solid 10px #005866;  
