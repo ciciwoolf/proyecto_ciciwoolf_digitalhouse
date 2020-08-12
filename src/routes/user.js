@@ -63,13 +63,13 @@ router.post('/registro', upload.single('avatar'),[
             }
         }
         return true   //De no encontrase el email entonces no muestra el mensaje de errror
-    }).withMessage('Usuario ya se encuentra registrado...'),
+    }).withMessage('che, tu email ya lo tenemos!'),
 
     //Aquí valido el Password   
-    check('password').isLength({min: 6 }).withMessage('La contraseña debe tener un mínimo de 6 caractéres'),
+    check('password').isLength({min: 6 }).withMessage('che, boludo, la contraseña debe tener un mínimo de 6 caractéres para ser super secreto, no pongas 123456 pelotudo!'),
     
     //Aquí valido la confimación del password dispuesto por el usuario
-    check('confirm_password').isLength({min: 6 }).withMessage('La confirmación de la contraseña debe tener un mínimo de 6 caractéres'),
+    check('confirm_password').isLength({min: 6 }).withMessage('ojo! la confirmación de la super secreta contraseña debe tener un mínimo de 6 caractéres'),
 
     //Aquí valido si las contraseñas son iguales o no
     //El ( value ) viene a ser el valor que viaje en el name del del input del campo 
@@ -81,7 +81,7 @@ router.post('/registro', upload.single('avatar'),[
         }else{
             return false   // Si retorno un false si se muestra el error
         }    
-    }).withMessage('Las contraseñas deben ser iguales'),
+    }).withMessage('che, las contraseñas deben ser iguales :-)'),
 
     //Aquí obligo a que el usuario seleccione su avatar
     body('avatar').custom((value, {req}) =>{
@@ -89,14 +89,14 @@ router.post('/registro', upload.single('avatar'),[
             return true
         }
         return false;
-    }).withMessage('Debe elegir su avatar y debe ser un archivo con formato: .JPG ó JPEG ó PNG')
+    }).withMessage('che, no eligiste tu avatar! cuanta boludez! por favor, debe ser un archivo con formato: .JPG ó JPEG ó PNG')
   ], controllersUser.create);
 
 
 router.get('/login', controllersUser.login);
 
 router.post('/login',[
-  check('email').isEmail().withMessage('Agregar un email válido'),
+  check('email').isEmail().withMessage('agregá tu email espléndido y válido'),
   body('email').custom( (value) =>{
     for (let i = 0; i < archivoUsuarios.length; i++) {
         if (archivoUsuarios[i].email == value) {
@@ -105,8 +105,8 @@ router.post('/login',[
         }
     }
     return false   
-}).withMessage('Usuario no se encuentra registrado...'),
-check('password').isLength({min: 6 }).withMessage('La contraseña debe tener un mínimo de 6 caractéres'),
+}).withMessage('che! lo siento, pero no se encuentra registrado...!'),
+check('password').isLength({min: 6 }).withMessage('sorry papá, la contraseña debe tener un mínimo de 6 caractéres'),
 body('password').custom((value, {req}) =>{
   for (let i = 0; i < archivoUsuarios.length; i++) {
     if (archivoUsuarios[i].email == req.body.email) {
@@ -117,7 +117,7 @@ body('password').custom((value, {req}) =>{
       }
     }
 }
-}).withMessage('Contraseña no coinciden...')
+}).withMessage('sorry papá! las contraseñas no coinciden...')
 
 ]  ,controllersUser.ingresar);
 

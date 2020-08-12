@@ -2,6 +2,10 @@ const path = require('path');
 const fs = require('fs');
 const db = require('../database/models');
 const Product = db.Product;
+
+//const {Cart, Category, Country, Order, Payment_Method, Product_Order, Product, Role, User} = require('../database/models');
+
+
 //Aqui hacen esto para lograr activalos operadores en sus querys (like - count - max) 
 const Op = db.Sequelize.Op;
 
@@ -9,7 +13,7 @@ const Op = db.Sequelize.Op;
 //const Product = db.Product; 
 //const Category = db.category;
 //const TipoPago = db.TipoPago;
-//const {Product,Category,TipoPago} = require('../database/models');
+
 
 
 module.exports = {
@@ -28,7 +32,7 @@ module.exports = {
             //return res.send(products);
             res.render(path.resolve(__dirname, '..', 'views', 'admin', 'administrar'),{products});
         })
-        .catch(error => res.send(error))
+        .catch(error => res.send(error))  //En error de base de datos - database error - make a vista that communicates the error.
     },
     create: (req, res) =>{
         res.render(path.resolve(__dirname, '..','views','admin','create'));
@@ -115,7 +119,7 @@ module.exports = {
     search: ( req, res) =>{
         Product.findAll({
             where:{
-                name: {[Op.like]: `%${req.query.search}%`} //review
+                name: {[Op.like]: `%${req.query.search}%`} //where it matches search request
             }
         })
         .then(resultado => { res.render(path.resolve(__dirname, '..', 'views', 'admin', 'administrar'),{products: resultado});})

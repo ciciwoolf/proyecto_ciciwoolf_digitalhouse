@@ -9,6 +9,13 @@ const {
   body
 } = require('express-validator');
 
+
+
+//const jwt = require('jsonwebtoken');  Cici's Notes
+
+
+
+
 module.exports = {
     registro: (req,res) =>{
         res.render(path.resolve(__dirname, '../views/usuarios/registro'));
@@ -110,3 +117,24 @@ module.exports = {
     }
 
 }
+
+/*
+
+const payload= {
+  user: {
+    email: usuarioALoguearse.email
+  }
+}
+  jwt.sign(
+    payload,
+    'asjdkfljdksadjflskdjf',  //put in secret code
+    {
+      expriresIn: 3600
+
+    },
+    (err, token) => {
+
+    }
+  )
+
+*?
