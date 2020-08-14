@@ -3,7 +3,7 @@ const fs = require('fs');
 const db = require('../database/models');
 const Product = db.Product;
 
-//const {Cart, Category, Country, Order, Payment_Method, Product_Order, Product, Role, User} = require('../database/models');
+//const {Cart, Category, Country, Order, paymentMethod, Product_Order, Product, Role, User} = require('../database/models');
 
 
 //Aqui hacen esto para lograr activalos operadores en sus querys (like - count - max) 
@@ -11,7 +11,7 @@ const Op = db.Sequelize.Op;
 
 //Esto es otra forma de declarar los Modelos en nuestro controlador
 //const Product = db.Product; 
-//const Category = db.category;
+//const Category = db.Category;
 //const TipoPago = db.TipoPago;
 
 

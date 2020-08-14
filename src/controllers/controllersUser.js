@@ -3,6 +3,7 @@ const fs = require('fs');
 const bcrypt = require('bcryptjs');
 const multer = require('multer');
 const _ = require("lodash");
+//const User = db.User; 
 const {
   check,
   validationResult,
