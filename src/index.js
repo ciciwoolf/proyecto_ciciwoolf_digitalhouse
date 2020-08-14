@@ -41,8 +41,9 @@ const userRoutes = require('./routes/user');
 const productoRoutes = require('./routes/producto');
 const adminRoutes = require('./routes/admin');
 const ManagerRoutes = require('./routes/user_manager');
+//const apiRoutesProductos = require('./routes/api/apiRoutesProductos'); For next Sprint
 
-//const apiMoviesRouter = require('./routes/api/movies'); *Cici's Notes, example only
+
 
 //Middleware de las rutas de mi proyecto
 app.use(webRoutes);
@@ -50,8 +51,7 @@ app.use(userRoutes);
 app.use(productoRoutes);
 app.use(adminRoutes);
 app.use(ManagerRoutes);
-
-//app.use('/api/movies', apiMoviesRouter);  *Cici's Notes, example only
+//app.use(apiRoutesProductos);  *Cici's Notes, example only
 
 
 //Levantar servidor
