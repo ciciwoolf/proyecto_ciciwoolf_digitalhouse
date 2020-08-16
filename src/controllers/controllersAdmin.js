@@ -3,7 +3,7 @@ const fs = require('fs');
 const db = require('../database/models');
 const Product = db.Product;
 
-//const {Cart, Category, Country, Order, paymentMethod, Product_Order, Product, Role, User} = require('../database/models');
+//const {Cart, Category, Country, Order, paymentMethod, productOrder, Product, Role, User} = require('../database/models');
 
 
 //Aqui hacen esto para lograr activalos operadores en sus querys (like - count - max) 

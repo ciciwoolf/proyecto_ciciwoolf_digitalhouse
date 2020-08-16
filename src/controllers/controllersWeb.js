@@ -1,7 +1,11 @@
+//Cici's 
+
 const path = require('path');
 const fs = require('fs');
 const db = require('../database/models');
-const Product = db.Product;module.exports = {
+const Product = db.Product;
+
+module.exports = {
     index: function(req,res){
         Product.findAll()
             .then(products => res.render(path.resolve(__dirname, '..', 'views','web','index'),{products}))
@@ -12,4 +16,5 @@ const Product = db.Product;module.exports = {
     },
     contacto: function(req,res){
         res.sendFile(path.resolve(__dirname, '..', 'views','web','contacto.ejs'))
-    }}
+    }
+}
