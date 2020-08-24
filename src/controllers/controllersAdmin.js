@@ -6,24 +6,8 @@ const Category = db.Category;
 const Cart = db.Cart;
 //const {Cart, Category, Country, Order, paymentMethod, productOrder, Product, Role, User} = require('../database/models');
 
-<<<<<<< HEAD
 const Op = db.Sequelize.Op;
 
-=======
-//const {Cart, Category, Country, Order, paymentMethod, productOrder, Product, Role, User} = require('../database/models');
-
-
-//Aqui hacen esto para lograr activalos operadores en sus querys (like - count - max) 
-const Op = db.Sequelize.Op;
-
-//Esto es otra forma de declarar los Modelos en nuestro controlador
-//const Product = db.Product; 
-//const Category = db.Category;
-//const TipoPago = db.TipoPago;
-
-
-
->>>>>>> c04708e56363d6b02b0ae9276aed0576fe8366e6
 module.exports = {
     index: (req,res) =>{
 

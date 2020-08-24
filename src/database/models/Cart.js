@@ -27,22 +27,15 @@ module.exports = (sequelize,DataTypes) =>{
         )
     };
 
-   
-    // A cart has a user 1:1
-    Cart.associate = function(models) {
-        Cart.belongsTo(models.User, {
-            as: "users",
-            foreignKey: "user_id"   //Check and then delete
-        })
-    }
-
-    //A cart has many orders 
-    Cart.associate = function(models) {
-            Cart.hasMany(models.Order, {
-                as: "orders",
-                foreignKey: "order_id"     //Check and then delete
-            })
-        }  
-
+    /*Cart.associate = function(models){
+        Cart.hasMany(
+            models.Product,
+            {
+                as: 'products',
+                foreignKey: 'id'
+            }
+        )
+    } */  
+  
     return Cart;
 }

@@ -3,14 +3,10 @@ const fs = require('fs');
 const bcrypt = require('bcryptjs');
 const multer = require('multer');
 const _ = require("lodash");
-<<<<<<< HEAD
 //Include User from model
 const db = require('../database/models')
 const User = db.User;
 
-=======
-//const User = db.User; 
->>>>>>> c04708e56363d6b02b0ae9276aed0576fe8366e6
 const {
   check,
   validationResult,
@@ -137,27 +133,3 @@ module.exports = {
     }
 
 }
-<<<<<<< HEAD
-=======
-
-/*
-
-const payload= {
-  user: {
-    email: usuarioALoguearse.email
-  }
-}
-  jwt.sign(
-    payload,
-    'asjdkfljdksadjflskdjf',  //put in secret code
-    {
-      expriresIn: 3600
-
-    },
-    (err, token) => {
-
-    }
-  )
-
-*/
->>>>>>> c04708e56363d6b02b0ae9276aed0576fe8366e6
