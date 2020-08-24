@@ -2,44 +2,62 @@ const path = require('path');
 const fs = require('fs');
 const db = require('../database/models')
 const Product = db.Product;
-
-//destructuring
-//const {Model1, Model2} = require('../database/models')
+const Category = db.Category;
+const Cart = db.Cart;
 
 module.exports = {
     index: function(req,res){
-        Product.findAll() //select * from products
-        .then(products =>{ res.render(path.resolve(__dirname, '..', 'views','productos','productos'),{products})})
-    .catch(error => res.send(error))
+        const products = Product.findAll();
+        const categories = Category.findAll();
+        Promise.all([products,categories])
+        .then(([products,categories]) =>{
+            res.render(path.resolve(__dirname , '..','views','productos','productos') , {products,categories});
+        })           
+        .catch(error => res.send(error))
     },
+    categories: (req,res) =>{
+        const categories = Category.findAll();
+        console.log(req.query.category);
+        const categorySelected = req.query.category;
+        
+        if (categorySelected != '3')
+        {
+            const products = Product
+            .findAll({
+                where: {categoryId : req.query.category},
+                include: [{association: 'category'}]
+            })
+            Promise.all([products,categories])
+            .then(([products,categories]) =>
+
+                res.render(path.resolve(__dirname, '..','views','productos','productos'), {products,categories })
+            )
+        }else{
+            console.log("ingresa al else")
+            const products = Product.findAll();
+            Promise.all([products,categories])
+            .then(([products,categories]) =>{
+            res.render(path.resolve(__dirname , '..','views','productos','productos') , {products,categories});
+            })           
+            .catch(error => res.send(error))
+
+        }            
+     
+    },
+    add: function(req,res){
+        const _body = {
+            user_id: req.session.usuario.id,
+            product_id: req.params.id
+        }    
+        Cart.create(_body)
+        .then(cart =>{
+            res.redirect('/administrar');
+        })
+        .catch(error => res.send(error))
+    }
+
 }
 
-
-/* Class on Friday 8-7-2020 Sprint 5 Notes: 
-
-index: function(req,res){
-    const platos = Dish.findAll();
-    const categorias = Category.findAll();
-    Promise.all([platos,categorias])
-    .then(([platos,categorias]) =>{
-        res.render(path.resolve(_dirname , '..', 'views', 'productos', 'productos'), {platos, categorias});
-    })
-    .catch(error => res.send(error))
-},
-
-
-//when you want to see detalle del producto
-show: (req, res) => {
-    Dish
-    .findByPk(req.params.id, {
-        include: ['category']
-    })
-    .then(platoComida =>{
-        res.render(path.resolve(_dirname , '..', 'views', 'productos', 'detail'), {platoComida});
-    })
-}
-
-*/
 
 
 

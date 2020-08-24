@@ -55,15 +55,15 @@ router.post('/registro', upload.single('avatar'),[
     //Aquí incoporé otras validaciones, para que las tengan de guía en sus proyectos
 
     //Aquí valido si el usuario ya está registrado en nuestro archivo JSON, esta es una forma
-
-    body('email').custom( (value) =>{
+    //JSON Logic - Commented out
+    /*body('email').custom( (value) =>{
         for (let i = 0; i < archivoUsuarios.length; i++) {
             if (archivoUsuarios[i].email == value) {
                 return false    //Si esto se cumple entonces muestra el mensaje de error
             }
         }
         return true   //De no encontrase el email entonces no muestra el mensaje de errror
-    }).withMessage('che, tu email ya lo tenemos!'),
+    }).withMessage('che, tu email ya lo tenemos!'),*/
 
     //Aquí valido el Password   
     check('password').isLength({min: 6 }).withMessage('che, boludo, la contraseña debe tener un mínimo de 6 caractéres para ser super secreto, no pongas 123456 pelotudo!'),
@@ -97,7 +97,7 @@ router.get('/login', controllersUser.login);
 
 router.post('/login',[
   check('email').isEmail().withMessage('agregá tu email espléndido y válido'),
-  body('email').custom( (value) =>{
+  /*body('email').custom( (value) =>{
     for (let i = 0; i < archivoUsuarios.length; i++) {
         if (archivoUsuarios[i].email == value) {
             
@@ -105,9 +105,9 @@ router.post('/login',[
         }
     }
     return false   
-}).withMessage('che! lo siento, pero no se encuentra registrado...!'),
+}).withMessage('che! lo siento, pero no se encuentra registrado...!'),*/
 check('password').isLength({min: 6 }).withMessage('sorry papá, la contraseña debe tener un mínimo de 6 caractéres'),
-body('password').custom((value, {req}) =>{
+/*body('password').custom((value, {req}) =>{
   for (let i = 0; i < archivoUsuarios.length; i++) {
     if (archivoUsuarios[i].email == req.body.email) {
       if(bcrypt.compareSync(value,archivoUsuarios[i].password)){
@@ -117,7 +117,7 @@ body('password').custom((value, {req}) =>{
       }
     }
 }
-}).withMessage('sorry papá! las contraseñas no coinciden...')
+}).withMessage('sorry papá! las contraseñas no coinciden...')*/
 
 ]  ,controllersUser.ingresar);
 

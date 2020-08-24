@@ -4,50 +4,33 @@ const db = require('../database/models');
 const _ = require("lodash");
 const { nextTick } = require('process');
 const Product = db.Product;
-//Aqui hacen esto para lograr activalos operadores en sus querys (like - count - max) 
+
 const Op = db.Sequelize.Op;
-
-//Esto es otra forma de declarar los Modelos en nuestro controlador
-//const Product = db.Product; 
-//const Category = db.category;
-//const TipoPago = db.TipoPago;
-//const {Product,Category,TipoPago} = require('../database/models');
-
+const User = db.User;
 
 module.exports = {
     index: (req,res) =>{
-        /*db.sequelize
-        .query('select * from products')
-        .then(relojes =>{
-            return res.send(relojes[0])
-        }) 
-        .catch(error => res.send(error)) */      
-
-        //res.render(path.resolve(__dirname, '..', 'views', 'admin', 'administrar'),{relojes});
-        //Ahora vamos a trabajar usando los métodos de sequelize
-        //Product.findAll()   //select * from products
-        //.then(relojes =>{
-            //return res.send(relojes);
-            let users =  JSON.parse(fs.readFileSync(path.resolve(__dirname, '../data/user.json')))
+        
+        User.findAll()   
+        .then(users =>{
             res.render(path.resolve(__dirname, '..', 'views', 'admin', 'user_manager'),{users});
-        //})
-        //.catch(error => res.send(error))
+        })
+        .catch(error => res.send(error))
     },
     create: (req, res) =>{
         res.render(path.resolve(__dirname, '..','views','admin','create'));
     },
     save: (req,res)=>{
-        //req.body.image = req.file.filename;
-        //return res.send(req.body);
+
         const _body = { 
-        //return res.send(_body);
+
             name : req.body.nombre,
             description: req.body.descripcion,
             price: req.body.precio,
             discount: req.body.descuento,
             image : req.file.filename
         }    
-        //return res.send(_body);
+
         Product.create(_body)
         .then(product =>{
             res.redirect('/administrar');
@@ -56,31 +39,24 @@ module.exports = {
     },
     show: (req,res)=>{
 
-        let usersFile =  JSON.parse(fs.readFileSync(path.resolve(__dirname, '../data/user.json')));
-        let user = usersFile.find(usuario => usuario.email == req.params.id)
-        
-        
-        //console.log("contenido de sesion de authenticated - show ");
-        //console.log(req.session.authenticated);
+        //let usersFile =  JSON.parse(fs.readFileSync(path.resolve(__dirname, '../data/user.json')));
+        //let user = usersFile.find(usuario => usuario.email == req.params.id)
+        User.findOne({
+            where: {
+              email: req.params.email},
+        })
+        .then(user =>{
+       
+            res.render(path.resolve(__dirname, '..','views','admin','user_detail'), {user});
+        })  
+        .catch(error => res.send(error))
 
-        res.render(path.resolve(__dirname, '..','views','admin','user_detail'), {user});
-        
-        /*Product.findByPk(req.params.id)  
-        .then(miReloj =>{
-            res.render(path.resolve(__dirname, '..','views','admin','detail'), {miReloj});
-        })*/  
-        //.catch(error => res.send(error))
     },
     destroy: (req,res) =>{
-
-        //console.log("Entra en destroy");
-        //Read users file
+        
+        /*JSON Logic - commented out
         let usersFile =  JSON.parse(fs.readFileSync(path.resolve(__dirname, '../data/user.json')));
-        
-        //console.log("Method update");
-        
         let requestedEmail = _.lowerCase(req.params.email);
-        //console.log(requestedEmail); 
         let cont = 1;
         usersFile.forEach(function(post){
             
@@ -89,43 +65,44 @@ module.exports = {
           if (storedEmail === requestedEmail) {
             usersFile.splice(cont-1,1); //splice remove current email, add new one
   
-            //console.log(usersFile);
-  
           let data = JSON.stringify(usersFile, null, 2);
-          //console.log(data);
   
           fs.writeFileSync(path.resolve(__dirname, '../data/user.json'), data, (err) => {
             if (err) throw err;
-            //console.log('Data written to file');
             });
-          
-    
         }  
         cont= cont + 1;
     });
-    res.redirect('/administrar');   
+    res.redirect('/administrar');*/   
+    User.destroy({
+        where: {
+            email : req.params.email
+        }
+    })
+    .then(()=>  res.redirect('/umanagers'))
+    .catch(error => res.send(error))
 
     },
     edit: (req,res) =>{
 
-        let usersFile =  JSON.parse(fs.readFileSync(path.resolve(__dirname, '../data/user.json')));
-        let user = usersFile.find(usuario => usuario.email == req.params.email)
-        
-        console.log("contenido de sesion de authenticated - update ");
-        console.log(req.session.authenticated);
-        
-        res.render(path.resolve(__dirname, '..','views','admin','user_edit'), {user});
+        //let usersFile =  JSON.parse(fs.readFileSync(path.resolve(__dirname, '../data/user.json')));
+        //let user = usersFile.find(usuario => usuario.email == req.params.email)
 
-        /*Product.findByPk(req.params.id)  
-        .then(relojEditar =>{
-            res.render(path.resolve(__dirname, '..','views','admin','edit'), {relojEditar})
+        User.findOne({
+            where: {
+              email: req.params.email},
+        })
+        .then(user =>{
+       
+            res.render(path.resolve(__dirname, '..','views','admin','user_edit'), {user});
         })  
-        .catch(error => res.send(error))   */     
+        .catch(error => res.send(error))
+          
     },
     update: (req,res) =>{
-        //console.log("En el metodo update");
+        console.log("Update Method")
         ssn=req.session;
-        //Read users file
+        /*JSON Logic - comented out
         let usersFile =  JSON.parse(fs.readFileSync(path.resolve(__dirname, '../data/user.json')));        
         let requestedEmail = _.lowerCase(req.params.email);
         console.log(requestedEmail); 
@@ -158,18 +135,80 @@ module.exports = {
         });
         //console.log("contenido de sesion de authenticated - update ");
         //console.log(req.session.authenticated);
-        res.redirect('/');
+        res.redirect('/');*/
+        User.update ({
+            first_name:req.body.first_name,
+            last_name: req.body.last_name,
+            image: req.file ? req.file.filename : req.body.oldImagen
+        }, {
+            where: {
+                email:req.params.email
+           }
+        })
+        .then(()=> res.redirect('/umanagers'))
+        .catch(error =>res.send(error))
         
     },
     search: ( req, res) =>{
-        Product.findAll({
+        console.log("SEARCH");
+        User.findAll({
             where:{
-                name: {[Op.like]: `%${req.query.search}%`}
+                first_name: {[Op.like]: `%${req.body.search}%`}
             }
         })
-        .then(resultado => { res.render(path.resolve(__dirname, '..', 'views', 'admin', 'administrar'),{products: resultado});})
+        .then(users => { res.render(path.resolve(__dirname, '..', 'views', 'admin', 'user_manager'),{users});})
         .catch(error => res.send(error))
+    },
+
+    new: (req,res) =>{
+        res.render(path.resolve(__dirname, '..', 'views', 'admin', 'usersave'));
+    },
+    sto: (req, res) => {
+      let errors = validationResult(req);
+      if (errors.isEmpty()) {
+        //Create _body variable which contains user's information gathered from the body
+        const _body = {
+          first_name: req.body.first_name,
+          last_name: req.body.last_name,
+          email: req.body.email,
+          password: bcrypt.hashSync(req.body.password, 10),
+          province: Number(req.body.province),
+          country: req.body.country,
+          avatar:  req.file ? req.file.filename : '',
+          role: 1   //Usuario 1 = Basico 2 = analista 9 = Administrador
+        }
+        //User model must be created as well as the user table in the Data Base
+        User
+          .create(_body)
+          .then(user =>{
+              res.redirect('/administrar')
+          })
+          .catch(error => res.send(error));     //error de Base de Datos
+        //JSON logic - User Management
+        //This section is comented out as we are working with Sequelize  
+        /*let archivoUsers = fs.readFileSync(path.resolve(__dirname, '../data/user.json'), {
+          encoding: 'utf-8'
+        });
+        let users;
+        if (archivoUsers == "") {
+          users = [];
+        } else {
+          users = JSON.parse(archivoUsers);
+        };
+        users.push(user);
+        usersJSON = JSON.stringify(users, null, 2);
+        fs.writeFileSync(path.resolve(__dirname, '../data/user.json'), usersJSON);*/
+        
+        res.redirect('/login');     
+      } else {
+      
+        return res.render(path.resolve(__dirname, '../views/usuarios/registro'), {
+          errors: errors.errors,  old: req.body
+        });
+      }
     }
+
+
 
 
 }

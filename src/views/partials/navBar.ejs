@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg  navbar-light bg-light fixed-top miNavBar" style="margin: auto" >
-  <a class="navbar-brand navlogo" id="img-logo" href="/"><img src="img/logo.png" width="90px" height="60px"></a>
+  <a class="navbar-brand navlogo" id="img-logo" href="/"><img src="/img/logo.png" width="90px" height="60px"></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -32,14 +32,14 @@
     <% if(locals.usuario) { %>  
       
       <li class="nav-item">
-        <img src="/images/users/<%=locals.usuario.avatar %>"    width = '100' height='100' style= 'border-radius: 150%;'alt="">
+        <img src="/images/users/<%=locals.usuario.avatar %>"   width = '100' height='100' style= 'border-radius: 150%;'alt="">
       </li>
       <li class="nav-item">
         <p class="nav-link ">Bienvenido  <%=locals.usuario.nombre %> <%=locals.usuario.apellido %> </p>
         <br><br>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/carrito"><ion-icon name="cart-outline"></ion-icon></a>
+        <a class="nav-link" href="/administrar/carrito/<%=locals.usuario.id %>"><ion-icon name="cart-outline"></ion-icon></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/logout">Cerrar sesión<ion-icon name="log-out-outline"></ion-icon></a>

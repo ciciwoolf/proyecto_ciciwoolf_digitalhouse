@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="es">
+  <%- include('../partials/head.ejs') %>    
+<body>
+    <main class="container-fluid">
+      <%- include('../partials/navBar.ejs') %>
+      <!--Administrador de productos-->      <section class="row">
+        <article class="col-12">
+          <h2 class="display-4 text-white bg-info text-center pt-5" style="margin-top:60px;">Contenido del Carrito</h2>
+        </article>
+        <article class="col-6">
+          <a class="btn btn-primary" href="/administrar/create">Agregar <ion-icon name="add-circle-outline"></ion-icon></a>          
+        </article>
+        <article class="col-6">
+          <form action="/administrar/search_results" method="GET">
+            <input type="search" name="search">
+            <button class="btn btn-primary" type="submit"><ion-icon name="search-outline"></ion-icon></button>
+          </form>
+        </article>
+        </article>  
+        <article class="col-12" >        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Precio Producto</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Ver detalle</th>
+                <th scope="col">Editar producto</th>
+                <th scope="col">Eliminar del carrito</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% for (i=0; i < carts.length; i++) { %>
+              <tr>
+                <td><%= carts[i].user.price %> </td>
+                <td><%= carts[i].user.name%> </td>
+                <td><a href="/administrar/detail/<%= carts[i].user.name%> "> <ion-icon name="eye-outline"></ion-icon></a></td>
+                <td><a href="/administrar/edit/<%= carts[i].user.name%> "> <ion-icon name="pencil-outline"></ion-icon></a></td>
+                <td><a href="/administrar/delete/<%= carts[i].user.name%>"><ion-icon name="trash-outline"></ion-icon></a></td>
+              </tr>
+              <% }; %>
+            </tbody>
+          </table> 
+        </article>       
+      </section>      <%- include('../partials/footer.ejs') %>
+    </main>
+  </body>
+</html>

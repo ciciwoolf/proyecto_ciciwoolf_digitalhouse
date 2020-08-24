@@ -5,6 +5,7 @@
     <main class="container-fluid">
       <%- include('../partials/navBar.ejs') %>   
       <!--Producto-->
+
       <section class="row">
             <article class="col-12 col-md-6 mx-auto mt-5">
                 <figure >
@@ -12,13 +13,15 @@
                 </figure> 
                
                 <div class="card-body">
-                  <h5 class="card-title"><%= user.nombre%></h5>
+                  <h5 class="card-title"><%= user.first_name%></h5>
                   <h5 class="card-title"><%= user.email %></h5>
                   <p class="card-text"><%= user.email %></p>
                   
                 </div>
-                <a href="/administrar" class="btn btn-danger">Volver</a>
+                <a href="/administrar" class="btn btn-danger">Volver</a>           
+
             </article>
+
       </section>
     </main>
     <%- include('../partials/footer.ejs') %>

@@ -13,11 +13,12 @@ const storage = multer.diskStorage({
     }
   });const upload = multer({ storage });const controllersAdmin = require(path.resolve(__dirname, '..', 'controllers', 'controllersUserManager'));
   
+router.get('/umanagers',verifyRole, controllersUserManager.index);
 router.get('/umanagers/:email',verifyRole, controllersUserManager.index);
-router.get('/umanagers/search_results', controllersAdmin.search);
-router.get("/administrar/create", controllersAdmin.create);
+router.post('/umanagers/search_results', controllersAdmin.search);
+router.get('/umanagers/create', controllersAdmin.new);
 router.post("/administrar/create", upload.single('imagen'), controllersAdmin.save);
-router.get('/umanagers/detail/:id', controllersAdmin.show);
+router.get('/umanagers/detail/:email', controllersAdmin.show);
 router.get('/umanagers/delete/:email', controllersAdmin.destroy);
 router.get('/umanagers/edit/:email', controllersAdmin.edit);
 router.put('/umanagers/edit/:email', upload.single('imagen'), controllersAdmin.update);

@@ -21,6 +21,9 @@ router.post("/administrar/create", upload.single('imagen'), controllersAdmin.sav
 router.get('/administrar/detail/:id', controllersAdmin.show);
 router.get('/administrar/delete/:id', controllersAdmin.destroy);
 router.get('/administrar/edit/:id', controllersAdmin.edit);
-router.put('/administrar/edit/:id', upload.single('imagen'), controllersAdmin.update);module.exports = router;
+router.put('/administrar/edit/:id', upload.single('imagen'), controllersAdmin.update);
+router.get('/administrar/inventario',  controllersAdmin.filtered);
+router.get('/administrar/carrito/:id',  controllersAdmin.cart);
 router.get('/administrar', verifyRole, controllersAdmin.index)
 
+module.exports = router;
