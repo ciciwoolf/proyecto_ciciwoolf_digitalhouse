@@ -32,7 +32,18 @@ module.exports = (sequelize,DataTypes) =>{
         )
     };
 
+    /*
 
+          //one product belongs to any product order m:1
+    Product.associate = function(models) {
+        Product.belongsTo(models.productOrder, {
+                as : 'product_orders',
+                foreignKey: 'product_order_id',
+                timestamps: false   //check then delete comment
+                })
+            }
+    
+            */
     
     
 

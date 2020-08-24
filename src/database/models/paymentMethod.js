@@ -20,5 +20,17 @@ module.exports = (sequelize,DataTypes) =>{
     }*/
 
     const paymentMethod = sequelize.define(alias,cols,/*config*/);
+
+    /*
+
+    paymentMethod.associate = function(models) {
+        paymentMethod.hasMany(models.Order, {
+                as : 'orders',
+                foreignKey: 'order_id'   //check then delete comment
+               })
+        }
+    
+    */
+
     return paymentMethod;
 }
