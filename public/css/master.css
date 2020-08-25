@@ -11,16 +11,16 @@ html body {
   
   .navbar {
     
-    padding-bottom: 5px;
+    padding-bottom: 2px;    
     width: 100%;
     height: 150px;
     padding-right: 0px;
     padding-left: 0px;
-    background-color: #20063B;
+    background-color:#20063B;   
     }
 
   nav.navbar.navbar-expand-lg.navbar-light.bg-light.fixed-top.miNavbar {
-    background-color: #20063B;
+    background-color: 3a0a6d;
   }
   
 
@@ -31,8 +31,8 @@ html body {
   
   a.nav-link {
     font-family: 'Josefin Sans', sans-serif;
-    color: #009FB7 !important;
-    font-size: 26px;
+    color: #3DA5D9 !important;
+    font-size: 22px;
   }
   
   a.nav-link:hover {
@@ -42,8 +42,8 @@ html body {
   
   .nav-link.login {
     font-family: 'Josefin Sans', sans-serif;
-    color: #009FB7 !important;
-    font-size: 26px;
+    color: #3DA5D9 !important;
+    font-size: 22px;
     margin-bottom: 30px;
     padding-top: 3rem;
   }
@@ -112,6 +112,6 @@ https://coolors.co/001011-ffb60a-613dc1-009fb7-20063b
 #001011   (Negro, mas o menos)
 #FFB60A    (amarillo)
 #613DC1     (purpura)
-#009FB7     (turquesa)
+#3DA5D9    (turquesa)
 #20063B     (berenja purpura, oscuro)
 */
