@@ -54,7 +54,22 @@ module.exports = {
             res.redirect('/administrar');
         })
         .catch(error => res.send(error))
-    }
+    },
+
+    //What's wrong with this one? 
+    show: (req,res)=>{
+
+        Product.findOne({
+            where: {
+                product_id: req.params.id},
+        })
+        .then(product =>{
+       
+            res.render(path.resolve(__dirname, '..','views','productos','product_detail'), {products, product});
+        })  
+        .catch(error => res.send(error))
+
+    },
 
 }
 

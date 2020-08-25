@@ -16,10 +16,10 @@ module.exports = {
     },
     
     nosotros: function(req,res){
-        res.sendFile(path.resolve(__dirname, '..', 'views','web','nosotros.ejs'))
+           res.render(path.resolve(__dirname, '..','views','web','nosotros'))
     },
     contacto: function(req,res){
-        res.sendFile(path.resolve(__dirname, '..', 'views','web','contacto.ejs'))
+        res.render(path.resolve(__dirname, '..', 'views','web','contacto'))
     }
 }
 
