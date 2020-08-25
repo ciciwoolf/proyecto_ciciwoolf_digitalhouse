@@ -20,7 +20,7 @@ module.exports = {
         console.log(req.query.category);
         const categorySelected = req.query.category;
         
-        if (categorySelected != '3')
+        if (categorySelected != '3')  //3 is all 'todos'
         {
             const products = Product
             .findAll({
@@ -61,7 +61,7 @@ module.exports = {
 
         Product.findOne({
             where: {
-                product_id: req.params.id},
+                product_id: req.params.id}, //This isn't right
         })
         .then(product =>{
        
