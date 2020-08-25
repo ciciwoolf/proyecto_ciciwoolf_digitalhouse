@@ -1,16 +1,6 @@
 <!doctype html>
 <html lang="es">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/css/index.css">
-    <title>Mafci Chocolate Artesanal</title>
-</head>
+  <%- include('../partials/head'); %>
   <body>
     <main class="container-fluid">
     <%- include('../partials/navBar.ejs') %>  
@@ -27,7 +17,7 @@
             <img src="img/banner1.png" class="d-block w-100" alt="products">
             <div class="carousel-caption">
               <h1 class="display-2" style=" font-family: 'Permanent Marker', cursive">chocolate que te lleva</h1>
-              <button type="button" id="compra" class="btn btn-primary btn-lg">comprá</button>
+              <button type="button" id="compra" class="btn btn-primary btn-lg" onclick="window.location.href='/productos'">comprá</button>
             </div>
           </div>
           <div class="carousel-item">
@@ -113,7 +103,7 @@
                 <h5 class="card-title"><%= products[i].name%></h5>
                 <h5 class="card-title" >$  <%= products[i].price%> </h5>
                 <p class="card-text descripcion"><%= products[i].description%> </p>
-                <a href="#" class="btn btn-primary">Ver detalle</a>
+                <a onclick="window.location.href='/productos/product_detail'" class="btn btn-primary">Ver detalle</a>
               </div>
             </article>
           <% } %>                   
@@ -123,10 +113,10 @@
             <h1 class="display-4">Los mejores chocolate, para vos!</h1>
             <p class="lead" >Nuestro chocolate proviene de sus orígenes nativos, los bosques de Ecuador y Perú. Está hecho de cacao 100% orgánico, recogido a mano por los agricultores. El proceso de fermentación se realiza durante cuatro días y los granos tostados se recogen con cuidado. ¡Degustarás el aroma del bosque en cada bocado!</p>
             <hr class="my-4">
-            <a class="btn btn-primary btn-lg" href="#" role="button">Aprendí  más</a>
+            <a class="btn btn-primary btn-lg" onclick="window.location.href='/productos'" role="button">Aprendí  más</a>
         </article>
         <article class="col-12 col-md-6 jumbotron jumbotron-fluid">
-            <img  src="img/prod1.png" class=" d-block w-100" alt="Los mejores chocolate del mundo">
+            <img  src="img/prod1.png" class=" d-block w-100" alt="Los mejores chocolates del mundo">
         </article>
       </section>
       <%- include('../partials/footer.ejs') %>
