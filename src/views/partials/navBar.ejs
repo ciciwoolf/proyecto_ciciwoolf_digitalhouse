@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg  navbar-light bg-light fixed-top miNavBar" style="background-color: #20063B   !important; margin: auto" >
+<nav class="navbar navbar-expand-lg  navbar-light bg-light fixed-top miNavBar" style="background-color: #20063B   !important; padding-bottom: 0px; padding-top: 2rem; font-size: 28px" >
   <a class="navbar-brand navlogo" id="img-logo" href="/"><img src="/img/logo.png" style="margin-top:80px" width="225px" height="160px"></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -7,24 +7,24 @@
   <div class="collapse navbar-collapse " id="navbarSupportedContent" >
     <ul class="navbar-nav mr-auto" >
       <li class="nav-item active">
-        <a class="nav-link " href="/">Inicio <span class="sr-only">(current)</span></a>
+        <a class="nav-link " href="/">inicio <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/nosotros">Nosotros</a>
+        <a class="nav-link" href="/nosotros">nosotros</a>
       </li>
       <li class="nav-item">
-          <a class="nav-link" href="/productos">Productos</a>
+          <a class="nav-link" href="/productos">productos</a>
       </li>
       <li class="nav-item">
-          <a class="nav-link" href="/contacto">Contacto</a>
+          <a class="nav-link" href="/contacto">contacto</a>
       </li>
     <% if(locals.usuario) { %>  
       <li class="nav-item">
-          <a class="nav-link" href="/administrar">Administrar</a>
+          <a class="nav-link" href="/administrar">administrar</a>
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="/umanagers/<%=locals.usuario.email %>">User Manager</a>
+        <a class="nav-link" href="/umanagers/<%=locals.usuario.email %>">user manager</a>
     </li>
     <% } %> 
     </ul>
@@ -35,24 +35,24 @@
         <img src="/images/users/<%=locals.usuario.avatar %>"   width ='70' height='70' style="margin-top: 1.2rem; border-radius: 150%;" alt="avatar">
       </li>
       <li class="nav-item">
-        <p class="nav-link" style="margin-top: 2rem; color:#3DA5D9">Bienvenido<%=locals.usuario.nombre %> </p>
+        <p class="nav-link" style="margin-top: 2.25rem; color:#3DA5D9"> bienvenido <%=locals.usuario.nombre %> </p>
         <br><br>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/administrar/carrito/<%=locals.usuario.id %>"><ion-icon name="cart-outline"></ion-icon></a>
+        <a class="nav-link" style=" color:#3DA5D9" href="/administrar/carrito/<%=locals.usuario.id %>" > <ion-icon name="cart-outline"></ion-icon></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" style="margin-top:2rem" href="/logout">Logout<ion-icon name="log-out-outline" style="color:#b4b4b4"></ion-icon></a>
+        <a class="nav-link" style="margin-top:2rem" href="/logout">logout<ion-icon name="log-out-outline" style="color:#b4b4b4"></ion-icon></a>
       </li>
  
     <% } else { %>  
 
       <!--Cuando no estoy logueado debería ver esto-->
       <li class="nav-item" >
-        <a class="nav-link" href="/login">Login</a>
+        <a class="nav-link" href="/login">login</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/registro">Registro</a>
+        <a class="nav-link" href="/registro">registro</a>
       </li>
     <%}%>  
     </ul>

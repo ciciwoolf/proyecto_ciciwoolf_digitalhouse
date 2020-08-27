@@ -11,17 +11,16 @@ html body {
   
   .navbar {
     
-    padding-bottom: 2px;    
+    padding-bottom: 2rem;    
     width: 100%;
     height: 150px;
     padding-right: 0px;
     padding-left: 0px;
     background-color:#20063B;   
+    margin-bottom: 0 !important;
     }
 
-  nav.navbar.navbar-expand-lg.navbar-light.bg-light.fixed-top.miNavbar {
-    background-color: 3a0a6d;
-  }
+
   
 
     #img-logo:hover {
@@ -115,3 +114,4 @@ https://coolors.co/001011-ffb60a-613dc1-009fb7-20063b
 #3DA5D9    (turquesa)
 #20063B     (berenja purpura, oscuro)
 */
+
