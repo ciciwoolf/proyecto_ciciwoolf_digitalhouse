@@ -19,66 +19,29 @@
 		<%- include('../partials/navBar.ejs') %>  
     
 <!--Product Details-->
-
-  <div class="container" class="col-sm-12 col-md-6 col-lg-4">
-		<div class="row">
-      		<section class="card-body" id="product1" class="col-sm-12 col-md-6 col-lg-4">
-		  		<img src="img/prod1.png" id="classic">      
-      		</section>
-       		 <section class="card-body" id="description" class="col-sm-12 col-md-6 col-lg-4">
-         		 <h2><b>Chocolate Oscuro "The Classic"</b></h2>
-         		 <h3>$250</h3>
-         		 <p>Aquí está el mejor chocolate oscuro que jamás vos probarás en tu vida. Notas de frambuesa, Malbec de Mendoza, leña de Colorado y manzanas verdes tentarán sus papilas gustativas. 
-           		 <br> <br> La vida se completa después de "The Classic". </p>
-          		<a href="#" id="compraCard" class="btn btn-outline-secondary">Comprá</a>
-       		 </section>
-      	</div>
-	</div>
-
-  <!--- Footer -->
-  <footer>
-	<footer class="row" id="footer1">
-		<div class="container-fluid">
-			<div class="row text-center">
-				<div class="col-md-4">
-					<img id="footerlogo" src="img/logo.png">
-				</div>
-
-				<div id="contactinfo1" class="col-md-4">
-					<hr class="light">
-					<p>mafcichocolate@yemail.com</p>
-					<p>Av. Lobos 1234, Belgrano, CABA.</p>
-					<p>1111 222 3344</p>
-				</div>
-
-				<div id="contactinfo2"class="col-md-4">				
-					<h2>¡Conectá!</h2>
-					<a href="#"><i class="fab fa-facebook"></i></a>
-					<a href="#"><i class="fab fa-instagram"></i></a>
-				</div>
-
-				<div class="col-12">
-				<hr class="light">
-				<h5>&copy; Mafci Chocolate</h5>
-				</div>
-			</div>
+  
+  <section class="row">
+	<article class="col-12 col-md-6 mx-auto mt-5" style="margin-top:100px">
+		<figure >
+		  <img  src="/images/products/<%= myProduct.image%>" class="card-img-top w-100 d-block" alt="Chocolate">
+		</figure> 
+		<% if (myProduct.discount == 30) { %>
+		  <img class="descuento" src="/img/promo30.png" alt="Descuento 30%">
+		<% } else if(myProduct.discount == 15){%>
+		  <img class="descuento" src="/img/promo15.png" alt="Descuento 15%">
+		<%}%>
+		<div class="card-body">
+		  <h5 class="card-title"><%= myProduct.name%></h5>
+		  <h5 class="card-title">$ <%= myProduct.price %></h5>
+		  <p class="card-text"><%= myProduct.description %></p>
+		  
 		</div>
+		<a href="/administrar" class="btn btn-danger">Volver</a>
+	</article>
+</section>
 
-	<article id="contact" class="col-12 col-md-6 pl-4">
-			  <h2 >Contactános</h2>
-			  <form  action="#" method="POST">
-				<div class="form-group">
-					  <label for="exampleInputEmail1">email address</label>
-					  <input type="email" class="form-control-md" id="exampleInputEmail1" aria-describedby="emailHelp">
-				</div>
-				<div class="form-group">
-					  <label for="nombre">nombre acá  </label>
-					  <input type="text" class="form-control-md" id="nombre">
-				</div>
-			</form> 
-	  </article>	
-	</footer>
-</footer>
+  
+	<%- include('../partials/footer.ejs') %>
 
 
 </body>

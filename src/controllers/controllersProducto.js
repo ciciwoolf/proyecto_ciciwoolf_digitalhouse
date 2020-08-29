@@ -56,16 +56,16 @@ module.exports = {
         .catch(error => res.send(error))
     },
 
-    //What's wrong with this one? 
+   
     show: (req,res)=>{
 
         Product.findOne({
             where: {
-                product_id: req.params.id}, //This isn't right
+                product_id: req.params.id}, 
         })
         .then(product =>{
        
-            res.render(path.resolve(__dirname, '..','views','productos','product_detail'), {products, product});
+            res.render(path.resolve(__dirname, '..','views','productos','product_detail'), {product});
         })  
         .catch(error => res.send(error))
 

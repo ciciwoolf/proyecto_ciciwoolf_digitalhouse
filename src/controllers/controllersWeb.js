@@ -2,15 +2,14 @@ const path = require('path');
 const fs = require('fs');
 const db = require('../database/models');
 const Product = db.Product;
-const Category = db.Category;
+
 
 module.exports = {
     index: function(req,res){
         products = Product.findAll()
-        categories = Category.findAll()
-        .then(products =>{
+           .then(products =>{
             
-            res.render(path.resolve(__dirname, '..','views','web','index'), {products, categories});
+            res.render(path.resolve(__dirname, '..','views','web','index'), {products});
         })           
         .catch(error => res.send(error))
     },

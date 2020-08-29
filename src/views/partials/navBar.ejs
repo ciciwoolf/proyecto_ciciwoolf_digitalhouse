@@ -28,18 +28,19 @@
     </li>
     <% } %> 
     </ul>
+   
     <ul class="my-2 my-lg-0 navbar-nav">
     <% if(locals.usuario) { %>  
       
       <li class="nav-item">
-        <img src="/images/users/<%=locals.usuario.avatar %>"   width ='70' height='70' style="margin-top: 1.2rem; border-radius: 150%;" alt="avatar">
+        <img src="/images/users/<%=locals.usuario.avatar %>"   width ='55' height='55' style="margin-top: 50px; border-radius: 150%;" alt="avatar">
       </li>
       <li class="nav-item">
-        <p class="nav-link" style="margin-top: 2.25rem; color:#3DA5D9"> bienvenido <%=locals.usuario.nombre %> </p>
+        <p class="nav-link" style="font-size: 18px; margin-top: 75px; color:#3DA5D9"> hi <%=locals.usuario.first_name %> </p>
         <br><br>
       </li>
       <li class="nav-item">
-        <a class="nav-link" style=" color:#3DA5D9" href="/administrar/carrito/<%=locals.usuario.id %>" > <ion-icon name="cart-outline"></ion-icon></a>
+        <a class="nav-link" href="/administrar/carrito/<%=locals.usuario.id %>" > <ion-icon name="cart-outline" style="color:#b4b4b4"></ion-icon></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" style="margin-top:2rem" href="/logout">logout<ion-icon name="log-out-outline" style="color:#b4b4b4"></ion-icon></a>

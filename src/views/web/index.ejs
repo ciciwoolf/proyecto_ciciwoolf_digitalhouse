@@ -89,11 +89,11 @@
           <h2 class="display-4 text-white bg-info text-center ">El mejor chocolate del mundo...</h2>
         </article>
 
-
+        
         <% for(let i= 0; i < products.length; i++){ %>
             <article class="col-12 col-md-6 col-lg-3 card p-2">
               <figure >
-                <img  src="images/products/<%= products[i].image%> " class="card-img-top w-100 d-block" alt="Chocolate">
+                <img  src="/images/products/<%= products[i].image%> " class="card-img-top w-100 d-block" alt="Chocolate">
               </figure>
                 <% if (products[i].discount == 30) { %>
                   <img class="descuento" src="img/promo30.png" alt="Descuento 30%">  
