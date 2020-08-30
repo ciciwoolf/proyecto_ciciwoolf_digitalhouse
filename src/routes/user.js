@@ -46,9 +46,9 @@ router.get('/registro', controllersUser.registro);
 
 router.post('/registro', upload.single('avatar'),[
     check('first_name').isLength({
-        min: 1
+        min: 3
       }).withMessage('che, pone tu nombre acá :-)'),
-    check('last_name').isLength({min: 1
+    check('last_name').isLength({min: 3
       }).withMessage('che, pone tu apellido acá  :-)'),
     check('email').isEmail().withMessage('che, agregá un email válido'),
 
@@ -66,10 +66,10 @@ router.post('/registro', upload.single('avatar'),[
     }).withMessage('che, tu email ya lo tenemos!'),*/
 
     //Aquí valido el Password   
-    check('password').isLength({min: 6 }).withMessage('che, boludo, la contraseña debe tener un mínimo de 6 caractéres para ser super secreto, no pongas 123456 pelotudo!'),
+    check('password').isLength({min: 8 }).withMessage('che, boludo, la contraseña debe tener un mínimo de 8 caractéres para ser super secreto, no pongas 12345678 pelotudo!'),
     
     //Aquí valido la confimación del password dispuesto por el usuario
-    check('confirm_password').isLength({min: 6 }).withMessage('ojo! la confirmación de la super secreta contraseña debe tener un mínimo de 6 caractéres'),
+    check('confirm_password').isLength({min: 8 }).withMessage('ojo! la confirmación de la super secreta contraseña debe tener un mínimo de 8 caractéres'),
 
     //Aquí valido si las contraseñas son iguales o no
     //El ( value ) viene a ser el valor que viaje en el name del del input del campo 
@@ -83,7 +83,28 @@ router.post('/registro', upload.single('avatar'),[
         }    
     }).withMessage('che, las contraseñas deben ser iguales :-)'),
 
-    //Aquí obligo a que el usuario seleccione su avatar
+
+    body('avatar').custom((value, {req}) => {
+      let ext
+      if(req.file != undefined ){ //if uploaded file is distinct from undefined, and
+          ext = ""+path.extname(req.file[0].filename).toLowerCase();
+          return true
+        
+      }
+      //console.log(ext);
+      if (
+          ext == ".jpg" ||
+          ext == ".jpeg" ||
+          ext == ".png" ||
+          ext == ".gif"){
+              return true;
+          }
+          return false;
+    }).withMessage('che, no eligiste tu avatar! cuanta boludez! por favor, debe ser un archivo con formato: JPG, JPEG, PNG o GIF')
+    ], controllersUser.create)
+
+    
+    /*
     body('avatar').custom((value, {req}) =>{
         if(req.file != undefined){
             return true
@@ -91,7 +112,7 @@ router.post('/registro', upload.single('avatar'),[
         return false;
     }).withMessage('che, no eligiste tu avatar! cuanta boludez! por favor, debe ser un archivo con formato: .JPG ó JPEG ó PNG')
   ], controllersUser.create);
-
+ */
 
 router.get('/login', controllersUser.login);
 
@@ -106,7 +127,7 @@ router.post('/login',[
     }
     return false   
 }).withMessage('che! lo siento, pero no se encuentra registrado...!'),*/
-check('password').isLength({min: 6 }).withMessage('sorry papá, la contraseña debe tener un mínimo de 6 caractéres'),
+check('password').isLength({min: 8 }).withMessage('sorry friend, la contraseña debe tener un mínimo de 8 caractéres'),
 /*body('password').custom((value, {req}) =>{
   for (let i = 0; i < archivoUsuarios.length; i++) {
     if (archivoUsuarios[i].email == req.body.email) {

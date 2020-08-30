@@ -31,6 +31,7 @@ html body {
     font-family: 'Josefin Sans', sans-serif;
     color: #3DA5D9 !important;
     font-size: 22px;
+    font-weight: bold;
   }
   
   a.nav-link:hover {

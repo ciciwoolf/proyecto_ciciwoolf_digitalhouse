@@ -65,7 +65,7 @@ module.exports = {
         })
         .then(product =>{
        
-            res.render(path.resolve(__dirname, '..','views','productos','product_detail'), {product});
+            res.render(path.resolve(__dirname, '..','views','productos','product_detail'), {products});
         })  
         .catch(error => res.send(error))
 
