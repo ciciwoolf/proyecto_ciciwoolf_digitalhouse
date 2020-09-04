@@ -6,7 +6,7 @@ Proyecto
 ___
 
 + ## ___Acerca de___
-
+       Los mejores chocolate, para vos! Nuestro chocolate proviene de sus orígenes nativos, los bosques de Ecuador y Perú. Está hecho de cacao 100% orgánico, recogido a mano por los agricultores. El proceso de fermentación se realiza durante cuatro días y los granos tostados se recogen con cuidado. ¡Degustarás el aroma del bosque en cada bocado!
 ___
 
 + ## ___Publico Objetivo___
