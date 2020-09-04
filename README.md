@@ -13,10 +13,10 @@ ___
        El cliente objetivo de este producto es la mujer profesional de clase media (~$20,000/mes) soltera de entre 25 y 35 años.      
         
 + ## ___Caracteristicas Principales___
-  1. Cada elemento de la página debe cumplir un propósito
-  2. Los llamados a la acción deben ser claros
-  3. Las conversiones siempre deben ser una prioridad
-  4. Los elementos deberían facilitar el compromiso
+  1. Navegación clara y fácil: el diseño del sitio web debe ser fácil de navegar y los elementos del menú deben ser fácilmente accesibles desde cualquier página.
+  2. Diseño visual: el sitio se ve bien y atrae clientes.
+  3. Accesibilidad a la información: los clientes pueden encontrar información facilmente y rápido. 
+  4. Branding: el sistio web es un reflejo directo del negocio Mafci y la marca. Clientes pueden establecer inmediatamente una conexión visual entre el logotipo, productos y      ubicación física.
 ___
 
 + ## ___Integrantes___
