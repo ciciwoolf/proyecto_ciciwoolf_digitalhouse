@@ -58,10 +58,12 @@ module.exports = {
 
    
     show: (req,res)=>{
-
+            console.log(req.url)
+            console.log(req.params)
         Product.findOne({
             where: {
                 id: req.params.id //match id to Product model
+                
             }, 
         })
         .then((product) =>{   //res.render has 2 parameters : res.render (PATH_TO_TEMPLATE , {object: obj})

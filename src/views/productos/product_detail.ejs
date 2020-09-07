@@ -27,7 +27,7 @@
 
 		<%- include('../partials/navBar.ejs') %>  
 
-		<article class="col-12" style="width: cover; margin-top:75px">
+		<article style="width: cover; margin-top:75px">
 			<h2 class="display-4 text-white bg-info text-center pt-5" >chocolate fino como<br> nunca probaste antes.</h2>
 		  </article>
     
@@ -43,8 +43,13 @@
 			  <h3>$ <%= product.price %></h3>
 			  <p><%= product.description %>
 				</p>
-		  		  <button type="submit"  id="compra" class="btn btn-outline-secondary">comprá</button> 
 
+				<form action="/cart/addToCart" method="post" class="form-inline">
+					<input type="hidden" name="productId" value="<%=product.id%>"> 
+					<button type="submit"  id="compra" class="btn btn-outline-secondary">comprá</button> 
+					<label for="cantidad">&nbsp;Cantidad&nbsp;</label>
+                    <input  class="form-control" type="number" id="cantidad" width="25px" name="cantidad" value="1">
+				</form>
 
 			</section>
 	  </div>
