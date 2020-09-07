@@ -44,9 +44,10 @@ module.exports = {
         }            
      
     },
+
     add: function(req,res){
         const _body = {
-            user_id: req.session.usuario.id,
+            user_id: req.session.user.id,
             product_id: req.params.id
         }    
         Cart.create(_body)
@@ -55,7 +56,7 @@ module.exports = {
         })
         .catch(error => res.send(error))
     },
-
+   
    
     show: (req,res)=>{
             console.log(req.url)

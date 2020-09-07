@@ -66,7 +66,7 @@ app.use(userRoutes);
 app.use(productoRoutes);
 app.use(adminRoutes);
 app.use(ManagerRoutes);
-//app.use(cartRoutes);
+app.use(cartRoutes);
 //app.use(apiRoutesProductos);  *Cici's Notes, example only
 
 
