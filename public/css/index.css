@@ -23,11 +23,35 @@ html body {
 
 }
 
-.misH1{
-    text-align: center;
-    color: red;
-    font-size: 2rem;
+#compra {
+  font-size: larger;
+  background-color: #613DC1 ;
+  color: white;
+  font-family: 'Permanent Marker', cursive;
+  text-shadow: #20063B 1px 0 10px;
 }
+
+
+#compra:hover {
+ 
+  background-color: #20063B;  
+}
+
+#aprendimas {
+  font-size: larger;
+  background-color: #613DC1 ;
+  color: white;
+  font-family: 'Josefin Sans', sans-serif !important;
+  text-shadow: #20063B 1px 0 10px;
+}
+
+
+#aprendimas:hover {
+ 
+  background-color: #20063B;  
+}
+
+
 
 /*Aquí dispuse nuestros mismos css que tenidamos en nuestra clase 3, lo realice sólo para que vean que podemos sin ningún problema, combinar como deseemos nuestros conocimientos de maquetación ahora con Bootstrap*/
 article img{

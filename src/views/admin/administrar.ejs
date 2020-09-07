@@ -6,10 +6,10 @@
       <%- include('../partials/navBar.ejs') %>
       <!--Administrador de productos-->      <section class="row">
         <article class="col-12">
-          <h2 class="display-4 text-white bg-info text-center pt-5" style="margin-top:100px">Administrador de Productos</h2>
+          <h2 class="display-4 text-white bg-info text-center pt-5" style="margin-top:100px">administrador de productos</h2>
         </article>
         <article class="col-6">
-          <a class="btn btn-primary" href="/administrar/create">Agregar <ion-icon name="add-circle-outline"></ion-icon></a>          
+          <a class="btn btn-primary" href="/administrar/create">agregar <ion-icon name="add-circle-outline"></ion-icon></a>          
         </article>
         <article class="col-6">
           <form action="/administrar/search_results" method="GET">
@@ -33,7 +33,7 @@
               <tr>
                 <td><%= product.id%> </td>
                 <td><%= product.name%> </td>
-                <td><a href="/administrar/detail/<%= product.id%> "> <ion-icon name="eye-outline"></ion-icon></a></td>
+                <td><a href="/productos/productDetail/<%= product.id%> "> <ion-icon name="eye-outline"></ion-icon></a></td>
                 <td><a href="/administrar/edit/<%= product.id%> "> <ion-icon name="pencil-outline"></ion-icon></a></td>
                 <td><a href="/administrar/delete/<%= product.id%>"><ion-icon name="trash-outline"></ion-icon></a></td>
               </tr>

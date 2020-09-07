@@ -3,7 +3,10 @@
 const express = require('express');
 const app = express();
 const path = require('path');
-const methodOverride = require('method-override');
+const methodOverride = require('method-override'); //This is a Node.js module available through the npm registry. Installation is done using the npm install command:$ npm install method-override
+//Lets you use HTTP verbs such as PUT or DELETE in places where the client doesn't support it.  
+
+
 //Requerir Sessión Cookies----------------
 const session = require('express-session');
 const cookies = require('cookie-parser');
@@ -20,6 +23,7 @@ app.use(express.static(path.resolve(__dirname, '..', 'public')));
 app.set('view engine','ejs');
 //URL encode  - Para que nos pueda llegar la información desde el formulario al req.body
 app.use(express.urlencoded({ extended: false }));
+
 //Middleware de aplicación el cual se encargue de controlar la posibilidad de usar otros métodos diferentes al GET y al POST, en nuestros formularios
 app.use(methodOverride('_method'));
 

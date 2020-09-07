@@ -61,15 +61,19 @@ module.exports = {
 
         Product.findOne({
             where: {
-                product_id: req.params.id}, 
+                id: req.params.id //match id to Product model
+            }, 
         })
-        .then(product =>{
+        .then((product) =>{   //res.render has 2 parameters : res.render (PATH_TO_TEMPLATE , {object: obj})
        
-            res.render(path.resolve(__dirname, '..','views','productos','product_detail'), {products});
+            res.render(path.resolve(__dirname, '..','views','productos','product_detail'), {product})   //display the selected product
+               
+            
         })  
+
         .catch(error => res.send(error))
 
-    },
+    }
 
 }
 

@@ -1,30 +1,60 @@
 <!doctype html>
 <html lang="en">
-  <%- include('../partials/head.ejs') %> 
+  <head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	  
+	
+		<!-- Bootstrap CSS -->
+			
+			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+			<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>       
+			<link rel="stylesheet" href="/css/bootstrap.min.css">
+	
+		<!-- Cici's Stylesheets-->
+		<link rel="stylesheet" href="/css/master.css">	
+			<link rel="stylesheet" href="/css/userDetalle.css">
+			<title>Mafci Chocolate Artesanal</title>
+	</head>
+
+
   <body>
     <main class="container-fluid">
       <%- include('../partials/navBar.ejs') %>   
-      <!--Producto-->
-
-      <section class="row">
-            <article class="col-12 col-md-6 mx-auto mt-5" style="margin-top:100px">
-                <figure >
-                  <img  src="/images/users/<%= user.avatar%>" class="card-img-top w-100 d-block" alt="Chocolate">
-                </figure> 
-               
-                <div class="card-body">
-                  <h5 class="card-title"><%= user.first_name%></h5>
-                  <h5 class="card-title"><%= user.email %></h5>
-                  <p class="card-text"><%= user.email %></p>
-                  
-                </div>
-                <a href="/administrar" class="btn btn-danger">Volver</a>           
-
-            </article>
-
-      </section>
-    </main>
+     
+      <article class="col-12" style="width: cover; margin-top:75px">
+        <h2 class="display-4 text-white bg-info text-center pt-5" >detalle de usuario</h2>
+        </article>
+      
+  <!--User Details-->
+  
+  <div class="container" class="col-sm-12 col-md-6 col-lg-4"  >
+    <div class="row" >
+        <section class="card-body" id="product1"  class="col-sm-12 col-md-6 col-lg-4">
+          <img src="/images/users/<%= user.avatar%>"  id="classic"  alt="<%= user.name%>">      
+        </section>
+        <section style="padding-top: 0" class="card-body" id="description" class="col-sm-12 col-md-6 col-lg-4">
+          <h4><%= user.first_name%>	&nbsp;<%= user.last_name%></h4>    
+          <h3> <%= user.email %></h3>
+          
+          <a href="/administrar" class="btn btn-danger">Volver</a>   
+  
+  
+        </section>
+      </div>
+  </div>
+  
+    
     <%- include('../partials/footer.ejs') %>
+  
+  
   </body>
-</html>
+  </html>
+
+
+
 

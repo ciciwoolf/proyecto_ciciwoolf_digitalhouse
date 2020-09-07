@@ -11,7 +11,7 @@ const storage = multer.diskStorage({
 
     },
     filename: function (req, file, cb) {
-      cb(null, 'prod-'+Date.now() + path.extname(file.originalname)); //how to name it prod++? prod1 prod2 prod 3 etc.
+      cb(null, 'prod-'+Date.now() + path.extname(file.originalname)); 
     }
   });
   
@@ -19,13 +19,4 @@ const upload = multer({ storage });
 
 
 router.get('/listadoDeProductos', verifyRole, apiControllersProductos.index);
-/*
-router.get('/administrar/search_results', controllersAdmin.search);
-router.get("/administrar/create", controllersAdmin.create);
-router.post("/administrar/create", upload.single('imagen'), controllersAdmin.save);
-router.get('/administrar/detail/:id', controllersAdmin.show);
-router.get('/administrar/delete/:id', controllersAdmin.destroy);
-router.get('/administrar/edit/:id', controllersAdmin.edit);
-router.put('/administrar/edit/:id', upload.single('imagen'), controllersAdmin.update);module.exports = router;
-router.get('/administrar', verifyRole, controllersAdmin.index)
-*/
+

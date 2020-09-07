@@ -8,7 +8,7 @@
         <section class="row">
           <article class="col-12  card pt-5" >
                   <div class="card-body container-fluid">
-                    <h2 class="card-title text-white  bg-info  text-center display-4" style="margin-top: 100px">Registrate</h2>
+                    <h2 class="card-title text-white  bg-info  text-center display-4" style="margin-top: 100px">registrate</h2>
                     <h4 class="text-center display-6" >creá tu cuenta ahora para poder comer chocolate!</h4>
                   </div>
           </article>
@@ -18,21 +18,35 @@
             <div class="container">
                 <div class="row" >
                     <div class="col-8 mx-auto bg-light ">
-                        <!--Errores controlados desde el Front-->
-                        <div>
-                            <ul id="errores">
+                     <!-- Error Section Front End-->
+                      <div>
+                        <ul id="errores"> </ul>
+                    </div>
+                        <!-- Aquí acomode los errores para que se vean mejor y Edu no se Angustie. Abrazos.--->
+                        <% if(typeof(errors) != 'undefined'){%>
+                            <ul class="alert alert-danger">
+                                <% errores.forEach(error => { %>
+                                    <li><%= error.msg%></li>
+                                <%})%>
                             </ul>
-                        </div>
+                        <%}%> 
 ​
-                        <!-- Aquí muestro los errores controlados desde el backend--->
+                        <!-- Aquí muestro los errores controlados desde el backend
+
                         <% if(typeof(errors) != 'undefined'){%>
                            <ul class="alert alert-danger">
                               <% errors.forEach(error => { %>
                                  <li><%= error.msg%></li>
                               <%});%>
                             </ul>
-                        <%}%>    
-                        <!----Fin mostrar errores--------->
+                        <%}%>   
+                        --> 
+
+                   
+                
+
+                    
+                        
                         <div class="signup-form">
                             <form id="formulario" action="/registro" method="post" enctype="multipart/form-data">
                                 <div class="form-group">
@@ -78,7 +92,7 @@
                               </div>  
 ​
                               <div class="form-group">
-                                  <button type="submit" id="registerbtn" class="btn btn btn-info">Registrarse</button>
+                                  <button type="submit" class="btn btn btn-info" id="buttons">registrate</button>
                               </div>
                             </form>
                             <div class="text-center my-3">ya tenés una cuenta?<a href="/login"><br>Inicia sesión</a></div>

@@ -47,10 +47,10 @@ router.get('/registro', controllersUser.registro);
 router.post('/registro', upload.single('avatar'),[
     check('first_name').isLength({
         min: 3
-      }).withMessage('che, pone tu nombre acá :-)'),
+      }).withMessage('pone tu nombre acá :-)'),
     check('last_name').isLength({min: 3
-      }).withMessage('che, pone tu apellido acá  :-)'),
-    check('email').isEmail().withMessage('che, agregá un email válido'),
+      }).withMessage('pone tu apellido acá  :-)'),
+    check('email').isEmail().withMessage('agregá un email válido'),
 
     //Aquí incoporé otras validaciones, para que las tengan de guía en sus proyectos
 
@@ -66,7 +66,7 @@ router.post('/registro', upload.single('avatar'),[
     }).withMessage('che, tu email ya lo tenemos!'),*/
 
     //Aquí valido el Password   
-    check('password').isLength({min: 8 }).withMessage('che, boludo, la contraseña debe tener un mínimo de 8 caractéres para ser super secreto, no pongas 12345678 pelotudo!'),
+    check('password').isLength({min: 8 }).withMessage('ojo! la contraseña debe tener un mínimo de 8 caractéres para ser super secreto, no pongas 12345678 :-)'),
     
     //Aquí valido la confimación del password dispuesto por el usuario
     check('confirm_password').isLength({min: 8 }).withMessage('ojo! la confirmación de la super secreta contraseña debe tener un mínimo de 8 caractéres'),
@@ -81,7 +81,7 @@ router.post('/registro', upload.single('avatar'),[
         }else{
             return false   // Si retorno un false si se muestra el error
         }    
-    }).withMessage('che, las contraseñas deben ser iguales :-)'),
+    }).withMessage('las contraseñas deben ser iguales :-)'),
 
 
     body('avatar').custom((value, {req}) => {
@@ -100,7 +100,7 @@ router.post('/registro', upload.single('avatar'),[
               return true;
           }
           return false;
-    }).withMessage('che, no eligiste tu avatar! cuanta boludez! por favor, debe ser un archivo con formato: JPG, JPEG, PNG o GIF')
+    }).withMessage('che, no eligiste tu avatar! por favor, debe ser un archivo con formato: JPG, JPEG, PNG o GIF')
     ], controllersUser.create)
 
     
@@ -138,7 +138,7 @@ check('password').isLength({min: 8 }).withMessage('sorry friend, la contraseña 
       }
     }
 }
-}).withMessage('sorry papá! las contraseñas no coinciden...')*/
+}).withMessage('sorry!las contraseñas no coinciden...')*/
 
 ]  ,controllersUser.ingresar);
 

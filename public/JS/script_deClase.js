@@ -1,3 +1,24 @@
+/*window.addEventListener('load',function() {
+
+    if (localStorage.getItem('nombreUsuario')==null) {
+        let nombre = prompt('Dinos tu nombre :-)');
+
+        document.querySelector('.bienvenida').innerHTML="Hola " + nombre;
+
+        localStorage.setItem('nombreUSuario', nombre);
+    
+    } else {
+        let nombre = localStorage.getItem('nombreUsuario');
+        document.querySelector('.bienvendia').innerHTML = 'Hola ' + nombre + '!'; 
+
+    }
+
+    console.log(localStorage);
+
+
+    }) 
+
+
 window.addEventListener('load',function(){
     //Capturas de elementos
     let formulario = document.getElementById('formulario');
@@ -90,4 +111,18 @@ window.addEventListener('load',function(){
     }
     ​  ​
     ​
-    })
+    })  */
+
+
+    event.preventDefault();
+    let errores = [];
+    let campoNombre = document.querySelector ('input.nombre');
+    if(campoNombre.value == "") {
+        errores.push("El campo nombre esta vacio");
+    }
+    if (errores.length > 0) {
+        event.preventDefault();
+    }
+
+
+

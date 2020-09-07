@@ -6,6 +6,8 @@ html body {
     min-height: 100%;
     font-family: 'Josefin Sans', sans-serif !important;
     width: 100%;
+    padding-right: 0px;
+    padding-left: 0px;
           
   }
   
@@ -54,15 +56,23 @@ html body {
   
 
   h2 {
-    padding-top: .5rem;
+    padding: 48px 0 px 0 px;
+    margin-bottom: 1rem;
+    margin-top: 1.5rem;
   }
 
 
 .container-fluid{
-    margin: 0 auto;
-    padding: 0;
-    margin-top: 0rem;
+  
+    padding-right: 0px;
+    padding-left: 0px;
+    margin: 0;
     font-family: 'Josefin Sans', sans-serif !important;
+    width:100%;
+    height: 100%;
+    
+  
+
 }
 
 #navbarSupportedContent{
@@ -70,11 +80,33 @@ html body {
 
 }
 
-.misH1{
-    text-align: center;
-    color: red;
-    font-size: 2rem;
-    font-family: 'Josefin Sans', sans-serif !important;
+#detailbuttons {
+  font-size: larger;
+  background-color: #20063B;
+  color: white;
+  font-family: 'Josefin Sans', sans-serif !important;
+  text-shadow: #20063B 1px 0 10px;
+}
+
+
+#detailbuttons:hover {
+ 
+  background-color: #613DC1;  
+ 
+}
+
+#buttons {
+  font-size: larger;
+  background-color: #3DA5D9;
+  color: white;
+  font-family: 'Josefin Sans', sans-serif !important;
+  text-shadow: #20063B 1px 0 10px;
+}
+
+
+#buttons:hover {
+ 
+  background-color: #613DC1;  
 }
 
 /*Aquí dispuse nuestros mismos css que tenidamos en nuestra clase 3, lo realice sólo para que vean que podemos sin ningún problema, combinar como deseemos nuestros conocimientos de maquetación ahora con Bootstrap*/
@@ -86,7 +118,8 @@ article img{
 article img:hover{
     opacity: 0.8;
 }
-p{
+p
+{
     text-align: justify;
 }
 
