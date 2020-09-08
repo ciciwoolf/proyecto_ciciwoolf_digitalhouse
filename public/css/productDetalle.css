@@ -2,13 +2,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Permanent+Marker&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 
-html,body {
+html body {
   height: 100%;
   width: 100%;
-  margin: 0px
+  margin: 0px;
   font-family: 'Josefin Sans', sans-serif;
-  background-color:  #fdfffc;
+
 }
+
+
 
 .navbar {
     background-color:#20063B;
@@ -58,16 +60,21 @@ html,body {
     height: 100%;
     border-style: solid; 
     border-width: 3px; 
-    border-color:#009FB7;
+    border-color:#613DC1;
     margin:50px 50px 50px 50px;
-    padding-right: 25px;
+    
+    padding-top: 50px;
+    padding-left: 50px;
+    padding-bottom: 50px;
 }
 
-#product1 {
-    padding-left: 100px;
+#product1 div {
+
+    padding-left: 2rem;
     padding-top: 100px;
     padding-bottom: 100px;  
-    width: auto;
+    padding-right: 100px;
+   
 }
 
 #classic {    
@@ -76,6 +83,8 @@ html,body {
     border: solid 10px #20063B  ;  
     height: 350px;    
     width: 350px;
+    
+    
 }
 
 /*

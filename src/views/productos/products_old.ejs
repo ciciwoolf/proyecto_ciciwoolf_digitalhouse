@@ -1,3 +1,5 @@
+
+
 <!doctype html>
 <html lang="es">
   <%- include('../partials/head.ejs') %>    
@@ -7,7 +9,7 @@
       <!--Listado de nuestros productos-->
       <section class="row">
         <article class="col-12">
-          <h2 class="display-4 text-white bg-info text-center pt-5" style="margin-top:55px">chocolate fino como<br> nunca probaste antes.</h2>
+          <h2 class="display-4 text-white bg-info text-center pt-5" style="margin-top:75px">chocolate fino como<br> nunca probaste antes.</h2>
         </article>
 
         <article class="col-12">
@@ -26,12 +28,11 @@
           </div>  
         </article>
 
-
         <% for(let i= 0; i < products.length; i++){ %>
           <article class="col-12 col-md-6 col-lg-3 card p-2">
-            <div class="borde">
-            <figure  >
-              <img style="padding: 2rem 2rem 2rem 2rem; border: 10px solid #43008b" src="/images/products/<%=products[i].image%> " class="card-img-top w-100 d-block" alt="Chocolate">
+            
+            <figure >
+              <img src="/images/products/<%=products[i].image%> " class="card-img-top w-100 d-block" alt="Chocolate">
             </figure>
               <% if (products[i].discount == 30) { %>
                 <img class="descuento" src="../img/promo30.png" alt="Descuento 30%">  
@@ -43,14 +44,36 @@
               <h5 class="card-title" >$  <%= products[i].price%> </h5>
               <p class="card-text descripcion"><%= products[i].description%> </p>
               <a href="/productos/productDetail/<%= products[i].id%>" id="detailbuttons" class="btn btn-primary">ver detalle</a>
-            </div> 
+              
             </div>
           </article>
 
         <% } %>  
 
-      
-  
+
+
+
+
+
+        <div id="producto" class="container-fluid padding">
+            <div class="row">
+              <div class="col-12 col-md-6 col-lg-3 card p-2">
+                <div class="borde">
+                  <% for(let i= 0; i < products.length; i++){ %>
+                  <div class="card-body">
+                    <img class="card-img-top" src="/images/products/<%=products[i].image%>" class="img-rounded" alt="Chocolate">
+                    <div class="card-body">
+                      <h4 class="card-title"><%= products[i].name%></h4>
+                      <p class="card-text">$  <%= products[i].price%></p>
+                      <a href="/productos/productDetail/<%= products[i].id%>" id="detailbuttons" class="btn btn-primary">ver detalle</a>
+                    
+                    </div> 
+                  </div>
+                  <% } %>  
+                </div>
+              </div>
+            </div>
+          </div>  
 
 
       </section>

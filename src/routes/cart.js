@@ -19,6 +19,8 @@ router.get('/cart', authMiddleware, controllersCart.cart);
 
 router.post('/cart/buy', authMiddleware, controllersCart.shop);
 
+//router.get('/cart/detailPurchase/:id', authMiddleware, controllersCart.buyDetail);
+
 /*
 router.post('/carrito/borrarElementoCarrito', authMiddleware, carritoController.deleteCart);
 router.post('/carrito/compra', authMiddleware, carritoController.shop);

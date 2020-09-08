@@ -38,15 +38,16 @@
 		  <section class="card-body" id="product1"  class="col-sm-12 col-md-6 col-lg-4">
 			  <img src="/images/products/<%= product.image%>"  id="classic"  alt="<%= product.name%>">      
 		  </section>
-			<section style="margin-top: 25px" class="card-body" id="description" class="col-sm-12 col-md-6 col-lg-4">
+			<section style="margin-left: 0; padding-right: 1rem; margin-top: 25px" class="card-body" id="description">
 			  <h2><b><%= product.name%></b></h2>
 			  <h3>$ <%= product.price %></h3>
-			  <p><%= product.description %>
-				</p>
+			  <p><%= product.description %> </p>
+				
 
 				<form action="/cart/addToCart" method="post" class="form-inline">
 					<input type="hidden" name="productId" value="<%=product.id%>"> 
-					<button type="submit"  id="compra" class="btn btn-outline-secondary">comprá</button> 
+
+					<button type="submit"  id="buttons" class="btn btn-outline-secondary">agregá al carrito</button> 
 					<label for="cantidad">&nbsp;Cantidad&nbsp;</label>
                     <input  class="form-control" type="number" id="cantidad" width="25px" name="cantidad" value="1">
 				</form>

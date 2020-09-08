@@ -13,7 +13,7 @@ module.exports = {
             .then((product)=>{
                 //return res.send(producto)
                 let price = Number(product.price)
-                //let salePrice = (price - ((price * product.discount) / 100))  
+                let salePrice = (price - ((price * product.discount) / 100))  
                 //console.log(salePrice + '====================================')
                 return productOrder.create({
                     //salePrice: salePrice,
@@ -41,7 +41,7 @@ module.exports = {
     },
 
     cart : (req,res) =>{
-        Product.findAll({
+        productOrder.findAll({
             where:{
                 user_id : req.session.usuario.id,
                 state: 1
@@ -63,7 +63,7 @@ module.exports = {
     shop : (req,res) =>{
         //return res.send("Estamos en la compra")
         let precioTotal = 0;
-        Product.findAll({
+        productOrder.findAll({
             where: {
                 user_id : req.session.usuario.id,
                 state: 1
@@ -96,7 +96,7 @@ module.exports = {
             
             })
         })
-        .then(() => res.redirect('/usuarios/detail_compra'))
+        .then(() => res.redirect('/usuarios/detail_purchase'))
         .catch(error => console.log(error))
     }
    
