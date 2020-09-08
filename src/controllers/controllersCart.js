@@ -1,6 +1,6 @@
 const path = require('path');
 const {validationResult} = require('express-validator');
-const {Product, Cart } = require('../database/models'); 
+const {Product, productOrder, Cart } = require('../database/models'); 
 
 module.exports = {
     addCart: (req,res) =>{
@@ -13,16 +13,16 @@ module.exports = {
             .then((product)=>{
                 //return res.send(producto)
                 let price = Number(product.price)
-                let salePrice = (price - ((price * product.discount) / 100))  
+                //let salePrice = (price - ((price * product.discount) / 100))  
                 //console.log(salePrice + '====================================')
-                return Item.create({
-                    salePrice: salePrice,
+                return productOrder.create({
+                    //salePrice: salePrice,
                     quantity: req.body.cantidad,
                     subtotal: salePrice * req.body.cantidad,
                     state: 1,
-                    userId: req.session.usuario.id,
-                    productId: producto.id,
-                    cartId: null
+                    user_id: req.session.usuario.id,
+                    product_id: producto.id,
+                    cart_id: null
                 })
                 .then(()=> res.redirect('/productos'))
                 .catch(error => console.log(error))
@@ -43,7 +43,7 @@ module.exports = {
     cart : (req,res) =>{
         Product.findAll({
             where:{
-                userId : req.session.user.id,
+                user_id : req.session.usuario.id,
                 state: 1
             },
             include:{
@@ -54,7 +54,7 @@ module.exports = {
         .then((cartProducto)=>{
             //return res.send(cartProducto)
             let total = cartProducto.reduce((total, item)=>(total = total + (Number(item.subtotal))),0)
-            return res.render(path.resolve(__dirname, '../views/carrito/carrito'), {
+            return res.render(path.resolve(__dirname, '../views/usuarios/cart'), {
                 cartProducto, total})
         })
 
@@ -65,7 +65,7 @@ module.exports = {
         let precioTotal = 0;
         Product.findAll({
             where: {
-                userId : req.session.usuario.id,
+                user_id : req.session.usuario.id,
                 state: 1
             }
         })
@@ -77,26 +77,26 @@ module.exports = {
         })
         .then((cart)=>{
             return Cart.create({
-                orderNumber : cart ? cart.orderNumber + 1 : 1,
+                id : cart ? cart.orderNumber + 1 : 1,
                 total : precioTotal,
-                userId : req.session.usuario.id
+                user_id : req.session.usuario.id
             })
         })
         .then((cart) =>{
-            Item.update({
+            productOrder.update({
                 state: 0,
-                cartId: cart.id
+                id: cart.id
             },
             
             {
                 where:{
-                    userId: req.session.usuario.id,
+                    user_id: req.session.usuario.id,
                     state: 1
                 }
             
             })
         })
-        .then(() => res.redirect('/carrito/historialCompra'))
+        .then(() => res.redirect('/usuarios/detail_compra'))
         .catch(error => console.log(error))
     }
    

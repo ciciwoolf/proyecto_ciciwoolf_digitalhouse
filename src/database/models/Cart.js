@@ -1,3 +1,5 @@
+//Changes according to MySQL and Dani's Code
+
 module.exports = (sequelize,DataTypes) =>{
     let alias = 'Cart'; //carts in MySQL tables
 
@@ -11,12 +13,14 @@ module.exports = (sequelize,DataTypes) =>{
        
         user_id: DataTypes.INTEGER,
         product_id: DataTypes.INTEGER, 
+        orderNumber: DataTypes.INTEGER,
+        total: DataTypes.INTEGER,
         createdAt: DataTypes.DATE,
         updatedAt: DataTypes.DATE,
         deletedAt: DataTypes.DATE,        
     };
 
-    const Cart = sequelize.define(alias,cols,/*config*/);
+    const Cart = sequelize.define(alias,cols,);
     Cart.associate = function(models) {
         Cart.belongsTo(
             models.Product,
@@ -27,15 +31,13 @@ module.exports = (sequelize,DataTypes) =>{
         )
     };
 
-    /*Cart.associate = function(models){
-        Cart.hasMany(
-            models.Product,
-            {
-                as: 'products',
-                foreignKey: 'id'
-            }
-        )
-    } */  
+  
   
     return Cart;
-}
+}    
+
+
+
+
+
+
