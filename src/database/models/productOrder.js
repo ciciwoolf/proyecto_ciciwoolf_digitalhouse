@@ -48,12 +48,12 @@ module.exports = (sequelize,DataTypes) =>{
         updatedAt: DataTypes.DATE,
         deletedAt: DataTypes.DATE,   
 
-    }
+    };
     
-
-    
+   
     
     let productOrder = sequelize.define(alias, cols);
+
     productOrder.associate = function (models){
         productOrder.belongsTo(models.Cart, {
             as: "cart",
@@ -73,9 +73,7 @@ module.exports = (sequelize,DataTypes) =>{
         
     }
 
-
-
-    
+   console.log('productOrder', productOrder);
 
     return productOrder;
 }

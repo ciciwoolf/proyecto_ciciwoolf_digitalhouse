@@ -7,14 +7,16 @@ module.exports = {
         //return res.send(req.body)
         const errores = validationResult(req);
         if(errores.isEmpty()){
-            Product.findByPk(req.body.id,{
+            console.log(req.body)
+            Product.findByPk(req.body.productId,{
                 include: ['category']
-            })
+                })
             .then((producto)=>{
         
                 let price = Number(producto.price)
                 let salePrice = (price - ((price * producto.discount) / 100))  
                 //console.log(salePrice + '====================================')
+               console.log(productOrder)
                 return productOrder.create({
                     salePrice: producto.price,
                     quantity: req.body.cantidad,
@@ -24,7 +26,7 @@ module.exports = {
                     product_id: producto.id,
                     cart_id: null
                 })
-                .then(()=> res.redirect('/productos'))
+                .then(()=> res.redirect('/cart'))
                 .catch(error => console.log(error))
             })
 
@@ -39,7 +41,7 @@ module.exports = {
             })
          }
     },
-
+//work on cart
     cart : (req,res) =>{
         productOrder.findAll({
             where:{

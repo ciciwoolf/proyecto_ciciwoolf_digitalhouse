@@ -13,13 +13,13 @@
         <article class="col-12">
           <div class="col-md-6  p-0">
             <% if(categories != 'undefined'){ %>
-              <form class="form-inline" action="/productos/categories" method="GET">&nbsp;
+              <form class="form-inline" action="/productos/categories" method="GET">
                 <select class="custom-select form-group mb-2 "  name="category" id="category" >	&nbsp;
                   <option value="#" disabled >seleccione la categoria deseada </option>
                   <% for (const category of categories) { %>
                     <option value="<%=category.id %>"><%=category.name %></option>
                   <% } %>
-                </select>&nbsp;&nbsp;
+                </select>&nbsp;
                 <button type="submit" id="buttons" class="btn btn-primary mb-2">busca categoria</button>
               </form>  
             <% } %>
@@ -31,15 +31,15 @@
           <article class="col-12 col-md-6 col-lg-3 card p-2">
             <div class="borde">
             <figure  >
-              <img style="padding: 2rem 2rem 2rem 2rem; border: 10px solid #43008b" src="/images/products/<%=products[i].image%> " class="card-img-top w-100 d-block" alt="Chocolate">
-            </figure>
+              <a href="/productos/productDetail/<%= products[i].id%>"><img style="padding: 1rem 1rem 1rem 1rem ; border: 10px solid #43008b" src="/images/products/<%=products[i].image%> " class="card-img-top w-100 d-block" alt="Chocolate">
+            </figure></a>
               <% if (products[i].discount == 30) { %>
                 <img class="descuento" src="../img/promo30.png" alt="Descuento 30%">  
               <% }else if(products[i].discount == 15 ){ %>
                 <img class="descuento" src="../img/promo15.png" alt="Descuento 30%">
               <% } %>
-            <div style="padding: .5rem .5rem 3rem .5rem" >
-              <h4 class="card-title"><%= products[i].name%></h4>
+            <div id="divcardheaders" style="padding: .5rem .5rem 3rem .5rem" >
+              <h4  class="card-title"><%= products[i].name%></h4>
               <h5 class="card-title" >$  <%= products[i].price%> </h5>
               <p class="card-text descripcion"><%= products[i].description%> </p>
               <a href="/productos/productDetail/<%= products[i].id%>" id="detailbuttons" class="btn btn-primary">ver detalle</a>

@@ -98,7 +98,7 @@ html body {
 }
 
 #buttons {
-  font-size: larger;
+  font-size: large;
   background-color: #3DA5D9;
   color: white;
   font-family: 'Josefin Sans', sans-serif !important;
@@ -124,6 +124,32 @@ p
 {
     text-align: justify;
 }
+
+
+
+#divcardheaders {
+
+  
+
+  white-space: nowrap; 
+  overflow: hidden; 
+ text-overflow: ellipsis;
+ 
+ /*
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  line-clamp: 3;
+  box-orient: vertical;
+*/
+
+}
+
+
 
 
 .descuento{
