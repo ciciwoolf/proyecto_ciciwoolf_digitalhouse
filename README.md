@@ -10,13 +10,19 @@ ___
 ___
 
 + ## ___Publico Objetivo___
-       El cliente objetivo de este producto es la mujer profesional de clase media (~$20,000/mes) soltera de entre 25 y 35 años.      
+       El cliente objetivo de este producto son las mujeres profesionales de clase media, solteras, de entre 25 y 35 años.      
         
 + ## ___Caracteristicas Principales___
-  1. Navegación clara y fácil: el diseño del sitio web debe ser fácil de navegar y los elementos del menú deben ser fácilmente accesibles desde cualquier página.
-  2. Diseño visual: el sitio se ve bien y atrae clientes.
-  3. Accesibilidad a la información: los clientes pueden encontrar información facilmente y rápido. 
-  4. Branding: el sitio web es un reflejo directo del negocio Mafci y la marca. Clientes pueden establecer inmediatamente una conexión visual entre el logotipo, productos y      ubicación física.
+
+       Dentro de las caracteristicas de mi pagina web se encuentran:
+
+  1. Una navegación clara y fácil: el diseño del sitio web debe ser fácil de navegar y los elementos del menú ser accesibles desde cualquier página.
+         
+  2. Un diseño visual: el sitio tiene que verse bien y ser atractivo para los clientes.
+    
+  3. Una accesibilidad a la información: los clientes pueden encontrar información facilmente y rápido.
+  
+  4. Branding: el sitio web es un reflejo directo del negocio Mafci y la marca. Los clientes pueden establecer inmediatamente una conexión visual entre el logotipo, los               productos y la ubicación física.
 ___
 
 + ## ___Integrantes___
