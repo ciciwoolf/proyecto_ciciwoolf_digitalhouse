@@ -4,7 +4,7 @@ window.addEventListener('load',function(){
         setTimeout(function(){
           Swal.fire(
             'BIENVENIDOS AL CHOCOLATE WEBSITE',
-            'Esperamos te gusten...',
+            'Esperamos que te gusten...',
           
            
           )

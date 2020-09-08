@@ -41,7 +41,7 @@ module.exports = {
             })
          }
     },
-//work on cart
+//work on
     cart : (req,res) =>{
         productOrder.findAll({
             where:{
