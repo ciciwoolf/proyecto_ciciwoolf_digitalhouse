@@ -13,14 +13,14 @@
         <article class="col-12">
           <div class="col-md-6  p-0">
             <% if(categories != 'undefined'){ %>
-              <form class="form-inline" action="/productos/categories" method="GET">
+              <form class="form-inline" action="/productos/categories" method="GET">&nbsp;
                 <select class="custom-select form-group mb-2 "  name="category" id="category" >	&nbsp;
                   <option value="#" disabled >seleccione la categoria deseada </option>
                   <% for (const category of categories) { %>
                     <option value="<%=category.id %>"><%=category.name %></option>
                   <% } %>
-                </select>
-                <button type="submit" id="buttons" class="btn btn-primary mb-2">busca categoria seleccionada</button>
+                </select>&nbsp;&nbsp;
+                <button type="submit" id="buttons" class="btn btn-primary mb-2">busca categoria</button>
               </form>  
             <% } %>
           </div>  
@@ -38,19 +38,16 @@
               <% }else if(products[i].discount == 15 ){ %>
                 <img class="descuento" src="../img/promo15.png" alt="Descuento 30%">
               <% } %>
-            <div class="card-body">
-              <h5 class="card-title"><%= products[i].name%></h5>
+            <div style="padding: .5rem .5rem 3rem .5rem" >
+              <h4 class="card-title"><%= products[i].name%></h4>
               <h5 class="card-title" >$  <%= products[i].price%> </h5>
               <p class="card-text descripcion"><%= products[i].description%> </p>
               <a href="/productos/productDetail/<%= products[i].id%>" id="detailbuttons" class="btn btn-primary">ver detalle</a>
             </div> 
             </div>
           </article>
-
         <% } %>  
 
-      
-  
 
 
       </section>

@@ -90,32 +90,14 @@
 
 <hr class="my-4">
 
-      <!--Listado de nuestros productos-->
-      <section class="row">
-        <article class="col-12">
-          <h2 class="display-4 text-white bg-info text-center ">El mejor chocolate del mundo...</h2>
-        </article>
-
-        
-        <% for(let i= 0; i < products.length; i++){ %>
-            <article class="col-12 col-md-6 col-lg-3 card p-2">
-              <figure >
-                <img style="padding: 2rem 2rem 2rem 2rem; border: 10px solid #43008b"  src="/images/products/<%= products[i].image%> " class="card-img-top w-100 d-block" alt="Chocolate">
-              </figure>
-                <% if (products[i].discount == 30) { %>
-                  <img class="descuento" src="img/promo30.png" alt="Descuento 30%">  
-                <% }else if(products[i].discount == 15 ){ %>
-                  <img class="descuento" src="img/promo15.png" alt="Descuento 30%">
-                <% } %>
-              <div class="card-body">
-                <h5 class="card-title"><%= products[i].name%></h5>
-                <h5 class="card-title" >$  <%= products[i].price%> </h5>
-                <p class="card-text descripcion"><%= products[i].description%> </p>
-                <a href="/productos/productDetail/<%= products[i].id%>" class="btn btn-primary" id="detailbuttons" >ver detalle</a>
-              </div>
-            </article>
-          <% } %>                   
-      </section>
+<!--- Fixed background -->
+<figure>
+	<div class="fixed-wrap">
+		<div id="fixed">
+		</div>
+	</div>
+</figure>
+  
       <section class="row pt-3" style="font-size:small; padding-right:0; padding-left:0">
         <article class="col-12 col-md-6 jumbotron jumbotron-fluid  pt-5 p-4"  >
             <h1 class="display-4">Los mejores chocolate, para vos!</h1>

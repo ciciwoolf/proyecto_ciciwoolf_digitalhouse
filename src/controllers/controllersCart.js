@@ -10,17 +10,17 @@ module.exports = {
             Product.findByPk(req.body.id,{
                 include: ['category']
             })
-            .then((product)=>{
-                //return res.send(producto)
-                let price = Number(product.price)
-                let salePrice = (price - ((price * product.discount) / 100))  
+            .then((producto)=>{
+        
+                let price = Number(producto.price)
+                let salePrice = (price - ((price * producto.discount) / 100))  
                 //console.log(salePrice + '====================================')
                 return productOrder.create({
-                    //salePrice: salePrice,
+                    salePrice: producto.price,
                     quantity: req.body.cantidad,
                     subtotal: salePrice * req.body.cantidad,
                     state: 1,
-                    user_id: req.session.usuario.id,
+                    user_id: req.session.usuario.id,  //id of logged in user
                     product_id: producto.id,
                     cart_id: null
                 })
