@@ -16,7 +16,7 @@ ___
   1. Navegación clara y fácil: el diseño del sitio web debe ser fácil de navegar y los elementos del menú deben ser fácilmente accesibles desde cualquier página.
   2. Diseño visual: el sitio se ve bien y atrae clientes.
   3. Accesibilidad a la información: los clientes pueden encontrar información facilmente y rápido. 
-  4. Branding: el sistio web es un reflejo directo del negocio Mafci y la marca. Clientes pueden establecer inmediatamente una conexión visual entre el logotipo, productos y      ubicación física.
+  4. Branding: el sitio web es un reflejo directo del negocio Mafci y la marca. Clientes pueden establecer inmediatamente una conexión visual entre el logotipo, productos y      ubicación física.
 ___
 
 + ## ___Integrantes___
