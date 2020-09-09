@@ -18,37 +18,25 @@
             <div class="container">
                 <div class="row" >
                     <div class="col-8 mx-auto bg-light ">
-                     <!-- Error Section Front End-->
-                      <div>
-                        <ul id="errores"> </ul>
-                    </div>
-                        <!-- Aquí acomode los errores para que se vean mejor y Edu no se Angustie. Abrazos.--->
-                        <% if(typeof(errors) != 'undefined'){%>
-                            <ul class="alert alert-danger">
-                                <% errores.forEach(error => { %>
-                                    <li><%= error.msg%></li>
-                                <%})%>
-                            </ul>
-                        <%}%> 
-​
-                        <!-- Aquí muestro los errores controlados desde el backend
-
-                        <% if(typeof(errors) != 'undefined'){%>
-                           <ul class="alert alert-danger">
-                              <% errors.forEach(error => { %>
-                                 <li><%= error.msg%></li>
-                              <%});%>
-                            </ul>
-                        <%}%>   
-                        --> 
-
-                   
-                
+                     <!-- Error Section-->
+                     <div class="col-8 mx-auto bg-light pt-2 ">
+                        <!--Aquí muestro los errores del lado del Js-Front -->
+                        <div>
+                         <ul id="errores"> </ul>
+                     </div>
+                         <!-- Aquí acomode los errores para que se vean mejor y Edu no se Angustie. Abrazos.--->
+                         <% if(typeof(errores) != 'undefined'){%>
+                             <ul class="alert alert-danger">
+                                 <% errores.forEach(error => { %>
+                                     <li><%= error.msg%></li>
+                                 <%})%>
+                             </ul>
+                         <%}%>  
 
                     
                         
                         <div class="signup-form">
-                            <form id="formulario" action="/registro" method="post" enctype="multipart/form-data">
+                            <form class="formulario" id="formulario" action="/registro" method="post" enctype="multipart/form-data">
                                 <div class="form-group">
                                     <!--Noten aqui en los input estoy persistiendo los datos si el usuario coloca algunos datos  buenos, pero otros no-->                                  
                                     <input type="text" class="form-control" name="first_name" placeholder="Nombre" value="<%= typeof old != 'undefined' ? old.first_name : '' %>">
@@ -104,5 +92,6 @@
         </section>
         <%- include('../partials/footer') %>
         <script src="/js/registerApi.js"></script>
+        <!--<script src="/js/registro.js"></script>-->
 </body>
 </html>

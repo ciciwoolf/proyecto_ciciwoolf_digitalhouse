@@ -32,7 +32,7 @@ window.addEventListener('load',function(){
         //Esta expresión regular valida como Mínimo seis caracteres, al menos una letra y un número:
         let rePassword = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/
         if(!rePassword.test(password.value)){
-            errores.push('La contraseña como mínimo debe tener ocho caracteres, al menos una letra y un número');
+            errores.push('No olvides tu password :-)');
             password.classList.add('is-invalid');   
             //errores['last_name'] = 'El campo nombre no puede estar vacio...';
         }else{

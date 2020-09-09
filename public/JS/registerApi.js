@@ -1,6 +1,53 @@
 window.addEventListener('load',function(){
    
 
+    //test section
+
+    let formulario = document.querySelector('.formulario');
+
+    formulario.addEventListener('submit',function(evento){
+        
+        if(!validaciones(evento)){
+            evento.preventDefault();
+        }else{
+            formulario.submit();
+        }    
+
+            function validaciones(evento){
+          
+                let {first_name,/*last_name,email,password,confirm_password,province, country, avatar*/} = formulario.elements;
+                let errores = []; //create empty array for error messages
+                
+                ulErrores.classList.add('alert-danger');   //Add button into registro.ejs
+                
+                if(first_name.value == ''){
+                    errores.push('El campo nombre no puede estar vacio...');
+                } else if (first_name.value.length < 3) {
+                    errores.push("El campo de nombre debe tener al menos 3 caracteres")
+             
+                }else{
+                    first_name.classList.add('is-valid');
+                    first_name.classList.remove('is-invalid');
+                }
+ 
+                //Aquí enviamos los errores al usuario
+            let ulErrores = document.getElementById('errores');
+            ulErrores.classList.add('alert-danger')
+            if(errores.length > 0){
+                evento.preventDefault();
+                ulErrores.innerHTML = "";
+                for (let i = 0 ; i < errores.length; i++){
+                    ulErrores.innerHTML += `<li> ${errores[i]} </li> `
+                }
+                errores = [];
+            }else{
+                return true;
+            } 
+          }
+
+        })
+
+
     //APIS
     let selectProvincia = document.getElementById('province');
     

@@ -5,9 +5,9 @@
     <main class="container-fluid">
       <%- include('../partials/navBar.ejs') %>
       <!--Listado de nuestros productos-->
-      <section class="row">
-        <article class="col-12">
-          <h2 class="display-4 text-white bg-info text-center pt-5" style="margin-top:55px">chocolate fino como<br> nunca probaste antes.</h2>
+      <section >
+        <article>
+          <h2 class="display-4 text-white bg-info text-center pt-5" style="margin-top:80px">chocolate fino como<br> nunca probaste antes.</h2>
         </article>
 
         <article class="col-12">
@@ -26,9 +26,10 @@
           </div>  
         </article>
 
-
+        <!--Thank you Alexey for helping me with the flex styling!!!-->
+        <div class="article_wrapper" style="display:flex; flex-wrap:wrap; justify-content:space-around">
         <% for(let i= 0; i < products.length; i++){ %>
-          <article class="col-12 col-md-6 col-lg-3 card p-2">
+          <article style="width:20%; margin:5px">
             <div class="borde">
             <figure  >
               <a href="/productos/productDetail/<%= products[i].id%>"><img style="padding: 1rem 1rem 1rem 1rem ; border: 10px solid #43008b" src="/images/products/<%=products[i].image%> " class="card-img-top w-100 d-block" alt="Chocolate">
@@ -47,7 +48,7 @@
             </div>
           </article>
         <% } %>  
-
+        </div>
 
 
       </section>

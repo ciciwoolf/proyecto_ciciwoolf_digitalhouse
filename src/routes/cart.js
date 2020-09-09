@@ -17,7 +17,7 @@ router.post('/cart/addToCart', authMiddleware, validate.addCart, controllersCart
 
 router.get('/cart', authMiddleware, controllersCart.cart);
 
-router.post('/cart/buy', authMiddleware, controllersCart.shop);
+//router.post('/cart/buy', authMiddleware, controllersCart.shop);
 
 //router.get('/cart/detailPurchase/:id', authMiddleware, controllersCart.buyDetail);
 

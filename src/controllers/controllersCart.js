@@ -24,9 +24,10 @@ module.exports = {
                     state: 1,
                     user_id: req.session.usuario.id,  //id of logged in user
                     product_id: producto.id,
-                    cart_id: null
+                    cart_id: null,
+                    order_id: null
                 })
-                .then(()=> res.redirect('/cart'))
+                .then(()=> res.redirect('/usuarios/cart'))
                 .catch(error => console.log(error))
             })
 
@@ -41,7 +42,7 @@ module.exports = {
             })
          }
     },
-//work on
+
     cart : (req,res) =>{
         productOrder.findAll({
             where:{
