@@ -38,7 +38,8 @@
                     <div class="row">
                       <div class="col-lg-12 p-5 bg-white rounded shadow-sm mb-5">
                         <% cartProducto.forEach(item => { %>
-                        <!-- Shopping cart table -->
+                       
+                          <!-- Shopping cart table -->
                         <div class="table-responsive">
                           <table class="table">
                             <thead>
@@ -57,13 +58,15 @@
                                 </th>
                               </tr>
                             </thead>
+
                             <tbody>
                               <tr>
                                 <th scope="row" class="border-0">
                                   <div class="p-2">
                                     <img src="/images/products/<%= item.product.image %>" alt="<%= item.product.name %>" width="70" class="img-fluid rounded shadow-sm">
                                     <div class="ml-3 d-inline-block align-middle">
-                                      <h5 class="mb-0"> <a href="#" class="text-dark d-inline-block align-middle">  <%= item.product.name %></a></h5><span class="text-muted font-weight-normal font-italic d-block"><%= item.category.name %></span>
+                                     <h5 class="mb-0"> <a href="#" class="text-dark d-inline-block align-middle">  <%= item.product.name %></a></h5>
+                                      <span class="text-muted font-weight-normal font-italic d-block">Category</span>
                                     </div>
                                   </div>
                                 </th>
@@ -110,7 +113,7 @@
                             <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Envío y manejo:</strong><strong>$0.00</strong></li>
                             <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Cálculo estimado de impuestos por cobrar:</strong><strong>$0.00</strong></li>
                             <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Total del pedido:</strong>
-                              <h5 class="font-weight-bold">$775.00</h5>
+                              <h5 class="font-weight-bold">$350.00</h5>
                             </li>
                           </ul><a href="#" class="btn btn-dark rounded-pill py-2 btn-block">Finalizar pedido</a>
                         </div>

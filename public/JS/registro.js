@@ -11,11 +11,15 @@ window.addEventListener('load',function(){
         }    
 
             function validaciones(evento){
-          
-                let {first_name,last_name,email,password,confirm_password,province, country, avatar} = formulario.elements;
+         
+                console.log(formulario.elements)
+                             
+                console.log(evento)
+
+                let {first_name,last_name,email,password,confirm_password, province, country, avatar} = formulario.elements;
                 let errores = []; //create empty array for error messages
-                
-                ulErrores.classList.add('alert-danger');   //Add button into registro.ejs
+
+                         
                 
                 if(first_name.value == ''){
                     errores.push('El campo nombre no puede estar vacio...');
@@ -25,8 +29,8 @@ window.addEventListener('load',function(){
                 }else{
                     first_name.classList.add('is-valid');
                     first_name.classList.remove('is-invalid');
-                }
-            ​
+                }                
+                
                 //Validar a apellidos
                 if(last_name.value == ''){
                     errores.push('El campo apellido no puede estar vacio...');
@@ -36,6 +40,8 @@ window.addEventListener('load',function(){
                     last_name.classList.add('is-valid');
                     last_name.classList.remove('is-invalid');
                 }
+
+                
                 
                 //Validar el email  -  password (Expresiones Regulares)
                 let reEmail = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/
@@ -48,8 +54,8 @@ window.addEventListener('load',function(){
                     email.classList.add('is-valid');
                     email.classList.remove('is-invalid');
                 }
-                
-            ​
+            
+            
                 //password
                 let rePassword = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/
                 //Javascript posee un método que se encarga de validar nuestras expresiones regulares test
@@ -82,7 +88,7 @@ window.addEventListener('load',function(){
                 }
         
                 //provincia
-
+                    console.log(province.value)
                 if(province.value == ""){
                     errores.push('Debes seleccionar una provincia');
                     province.classList.add('is-invalid');   
@@ -114,22 +120,25 @@ window.addEventListener('load',function(){
                     avatar.classList.remove('is-invalid');
                 }
         
+
+                      //Put error messages at the end of the function
+                      let ulErrores = document.getElementById('errores');
+                      ulErrores.classList.add('alert-danger')
+  
+                      if(errores.length > 0){
+                          
+                          evento.preventDefault();
+                          ulErrores.innerHTML = "";
+                          for (let i = 0 ; i < errores.length; i++){
+                          ulErrores.innerHTML += `<li> ${errores[i]} </li> `
+                          }
+                          errores = [];
+                      }else{
+                          return true;
+                   
+                     } 
                             
-                    //Aquí enviamos los errores al usuario
-                    let ulErrores = document.getElementById('errores');
-                    ulErrores.classList.add('alert-danger')
-                    if(errores.length > 0){
-                        
-                        evento.preventDefault();
-                        ulErrores.innerHTML = "";
-                        for (let i = 0 ; i < errores.length; i++){
-                        ulErrores.innerHTML += `<li> ${errores[i]} </li> `
-                        }
-                        errores = [];
-                    }else{
-                        return true;
-                 
-                   } 
+               
                 }
                 
              })

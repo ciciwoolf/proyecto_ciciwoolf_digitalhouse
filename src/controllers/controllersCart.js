@@ -27,7 +27,7 @@ module.exports = {
                     cart_id: null,
                     order_id: null
                 })
-                .then(()=> res.redirect('/usuarios/cart'))
+                .then(()=> res.redirect('/cart'))
                 .catch(error => console.log(error))
             })
 
@@ -55,7 +55,8 @@ module.exports = {
             }
         })
         .then((cartProducto)=>{
-            //return res.send(cartProducto)
+        
+
             let total = cartProducto.reduce((total, item)=>(total = total + (Number(item.subtotal))),0)
             return res.render(path.resolve(__dirname, '../views/usuarios/cart'), {
                 cartProducto, total})
@@ -77,7 +78,7 @@ module.exports = {
 
           <%= item.quantity %>
 
-
+*/
    
     shop : (req,res) =>{
         //return res.send("Estamos en la compra")
