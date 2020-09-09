@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 
 	<head>
@@ -6,8 +6,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	  
-	
-		<!-- Bootstrap CSS -->
+			<!-- Bootstrap CSS -->
 			
 			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -17,84 +16,28 @@
 			<link rel="stylesheet" href="/css/bootstrap.min.css">
 	
 		<!-- Cici's Stylesheets-->
-		<link rel="stylesheet" href="/css/master.css">	
+		  <link rel="stylesheet" href="/css/master.css">	
       <link rel="stylesheet" href="/css/productCart.css">
 			<title>Mafci Chocolate Artesanal</title>
 	</head>
 
-  <body>      
-      <main class="container-fluid" >
-      <%- include('../partials/navBar.ejs') %>  
+  <body>   
+   
+    <%- include('../partials/navBar.ejs') %>       
 
-                  <article class="col-12" style="width: cover; margin-top:75px">
-                  <h2 class="display-4 text-white bg-info text-center pt-5" >tu carrito</h2>
-                  </article>
+    <article style="width: cover; padding-top:0; padding-bottom: 1rem; margin-top:75px">
+      <h2 class="display-4 text-white bg-info text-center pt-5" >tu carrito</h2>
+    </article>
+
+  
 
             <!--Cart-->
-
-            <!DOCTYPE html>
-            <html lang="en">
-            
-                <head>
-                    <meta charset="utf-8">
-                    <meta name="viewport" content="width=device-width, initial-scale=1">
-                    <title>Mafci Chocolate Artesanal</title>
-                    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-                    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-                    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-                    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-                    <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
-                    <link href="css/productCart.css" rel="stylesheet">
-                    
-                    <link href="css/navbar.css" rel="stylesheet">
-                    
-                </head>
-            
-                <body>
-            <!--Barra de navegación-->
-                <!--Barra de navegación-->
-                <nav id="navbar" class="navbar navbar-expand-md navbar-dark sticky-top" class="col-12">
-                  <a class="navbar-brand navlogo" id="img-logo" href="/"><img src="img/logo.png" width="180px" height="125px"></a>
-                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"><i class=”fas fa-bars hamburger”></i></span>
-                  </button>      
-                <div class="collapse navbar-collapse" id="navbarNav">
-                  <ul class="navbar-nav mr-auto">
-                        <li class="nav-item active">
-                       <a class="nav-link pages" href="/">inicio </a>
-                        </li>
-                         <li class="nav-item">
-                       <a class="nav-link pages" href="/nosotros">nosotros</a>
-                         </li>
-                        <li class="nav-item">
-                        <a class="nav-link pages" href="/productos">productos</a>
-                        </li>
-                        <li class="nav-item">
-                        <a class="nav-link pages" href="/contacto">contacto</a>
-                        </li>
-                        <li class="nav-item">
-                        <a class="nav-link pages" href="/administrar">administrar</a>
-                        </li>
-                    </ul>
-                
-                    <ul class="my-2 my-lg-0 navbar-nav">
-                        <li class="nav-item">
-                        <a class="nav-link login" href="/login">login</a>
-                         </li>
-                        <li class="nav-item">
-                         <a class="nav-link login" href="/productCart"><i class="fa fa-shopping-cart" style="font-size:36px"></i></a>
-                       </li>
-                    </ul>
-                  </div>
-              </nav>  
-            
-             <!--Cart-->
-            
+                        
                 <div class="pb-5">
                   <div class="container">
                     <div class="row">
                       <div class="col-lg-12 p-5 bg-white rounded shadow-sm mb-5">
-              
+                        <% cartProducto.forEach(item => { %>
                         <!-- Shopping cart table -->
                         <div class="table-responsive">
                           <table class="table">
@@ -118,17 +61,18 @@
                               <tr>
                                 <th scope="row" class="border-0">
                                   <div class="p-2">
-                                    <img src="img/prod1.png" alt="The Classic" width="70" class="img-fluid rounded shadow-sm">
+                                    <img src="/images/products/<%= item.product.image %>" alt="<%= item.product.name %>" width="70" class="img-fluid rounded shadow-sm">
                                     <div class="ml-3 d-inline-block align-middle">
-                                      <h5 class="mb-0"> <a href="#" class="text-dark d-inline-block align-middle">"The Classic"</a></h5><span class="text-muted font-weight-normal font-italic d-block">Chocolate Oscuro</span>
+                                      <h5 class="mb-0"> <a href="#" class="text-dark d-inline-block align-middle">  <%= item.product.name %></a></h5><span class="text-muted font-weight-normal font-italic d-block"><%= item.category.name %></span>
                                     </div>
                                   </div>
                                 </th>
-                                <td class="border-0 align-middle"><strong>$250.00</strong></td>
-                                <td class="border-0 align-middle"><strong>1</strong></td>
+                                <td class="border-0 align-middle"><strong>  $<%= item.salePrice; %></strong></td>
+                                <td class="border-0 align-middle"><strong><%= item.quantity %></strong></td>
                                 <td class="border-0 align-middle"><a href="#" class="text-dark"><i class="fa fa-trash"></i></a></td>
                               </tr>
-                            
+                              <% }); %>
+                           
                             </tbody>
                           </table>
                         </div>
@@ -178,11 +122,10 @@
               
             <!--- Footer -->
             
-            </body>
-            </html>
+       
 
 <%- include('../partials/footer.ejs') %>
-</main>
+
 </body>
 </html>
 

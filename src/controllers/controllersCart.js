@@ -62,6 +62,22 @@ module.exports = {
         })
 
     },
+
+    /* From cart.ejs
+
+     <% cartProducto.forEach(item => { %>
+
+        /images/products/<%= item.product.image %>
+
+         <img src="/images/products/<%= item.product.image %>" alt="<%= item.product.name %>" 
+        
+        <%= item.category.name %>
+
+          $ <%= item.salePrice; %>
+
+          <%= item.quantity %>
+
+
    
     shop : (req,res) =>{
         //return res.send("Estamos en la compra")
