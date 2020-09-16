@@ -74,6 +74,8 @@ module.exports = {
             .then(()=> res.redirect('/administrar'))
             .catch(error =>res.send(error))
     },
+
+    
     search: ( req, res) =>{
         Product.findAll({
             where:{
@@ -83,13 +85,15 @@ module.exports = {
         .then(resultado => { res.render(path.resolve(__dirname, '..', 'views', 'admin', 'administrar'),{products: resultado});})
         .catch(error => res.send(error))
     },
+
+    
     inventory: function(req,res){
         const products = Product.findAll();
         const categories = Category.findAll();
         Promise.all([products,categories])
         .then(([products,categories]) =>{
             return res.send(products)
-            //res.render(path.resolve(__dirname , '..','views','productos','productos') , {platos,categorias});
+            
         })           
         .catch(error => res.send(error))
     },
@@ -103,7 +107,7 @@ module.exports = {
         Promise.all([products,categories])
         .then(([products,categories]) =>{
             return res.send(products)
-            //res.render(path.resolve(__dirname, '..','views','productos','productos'), {platos,categorias })
+            
         })        
      },
      cart: (req,res) =>{
@@ -120,7 +124,7 @@ module.exports = {
             //return res.send(carts[0].user.name)
             res.render(path.resolve(__dirname, '..','views','admin','cart'), {carts})
         })        
-     }
+     }  
 
 
 }

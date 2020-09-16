@@ -8,8 +8,8 @@ const methodOverride = require('method-override'); //This is a Node.js module av
 
 
 //Requerir Sessión Cookies----------------
-const session = require('express-session');
-const cookies = require('cookie-parser');
+const session = require('express-session'); //para almecenar datos del usuario en el servidor; se borra despues de cerrar browser
+const cookies = require('cookie-parser'); //para almecenar datos que persiste por un tiempo especifico; usado para validar usuario
 //----------------------------------------
 
 //Requerir el middleware que controla si el usuario está o no Logueado

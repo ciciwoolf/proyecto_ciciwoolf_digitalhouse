@@ -29,7 +29,7 @@
         <!--Thank you Alexey for helping me with the flex styling!!!-->
         <div class="article_wrapper" style="display:flex; flex-wrap:wrap; justify-content:space-around">
         <% for(let i= 0; i < products.length; i++){ %>
-          <article style="width:20%; margin:5px">
+          <article style="width:20%; margin:5px">  <!--we want about 4 items in a row, so width for each 20%-->
             <div class="borde">
             <figure  >
               <a href="/productos/productDetail/<%= products[i].id%>"><img style="padding: 1rem 1rem 1rem 1rem ; border: 10px solid #43008b" src="/images/products/<%=products[i].image%> " class="card-img-top w-100 d-block" alt="Chocolate">
